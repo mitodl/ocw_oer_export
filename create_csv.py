@@ -4,7 +4,10 @@ from dotenv import load_dotenv
 from os import getenv
 
 from client import fetch_all_data_from_api
+from utilities.cleanup_empty_brackets import cleanup_empty_brackets
+from utilities.html_to_text import html_to_text
 from utilities.markdown_to_text import unmark
+from utilities.markdown_to_text2 import markdown_to_text
 load_dotenv()
 
 def load_api_data_from_json(filename='api_data.json'):
@@ -62,8 +65,11 @@ def get_cr_accessibility(resource_content_tags):
 
 
 def get_description_in_plain_text(description):
-    stripped_markdown = unmark(description)
-    return unmark(description)
+    stripped_markdown = markdown_to_text(description)
+    stripped_html = html_to_text(stripped_markdown)
+    plain_description = cleanup_empty_brackets(stripped_html)
+
+    return plain_description
 
 
 def process_data(data):

@@ -1,8 +1,4 @@
-# I think this might not be needed, will check
-
-# import re
-
-# pattern = re.compile('<.*?>')
-
-
-# result = re.sub(pattern, '', html_string)
+import re
+def html_to_text(html):
+    pattern = re.compile('<.*?>')
+    return re.sub(pattern, '', html)
