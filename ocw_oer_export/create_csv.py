@@ -1,15 +1,16 @@
-import json
 import pandas as pd
-from os import getenv
-from dotenv import load_dotenv
+import logging
+from pathlib import Path
 
 from client import fetch_all_data_from_api
 from data_loader import load_data_from_json
+from constants import API_URL
 from utilities import cleanup_empty_brackets, html_to_text, markdown_to_text
 
-load_dotenv()
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-def create_ocw_topic_to_oer_subject_mapping(filename='mapping_files/ocw_topic_to_oer_subject.csv'):
+def create_ocw_topic_to_oer_subject_mapping(filename=Path('mapping_files') / 'ocw_topic_to_oer_subject.csv'):
     ocw_topic_to_subject = pd.read_csv(filename)
     ocw_topics_mapping = ocw_topic_to_subject.set_index('OCW Topic')['OER Subject'].to_dict()
     return ocw_topics_mapping
@@ -26,10 +27,10 @@ def get_cr_keywords(list_of_topics_objs):
 def get_cr_authors(list_of_authors_objs):
     return '|'.join(f"{author['last_name']}, {author['first_name']}" for author in list_of_authors_objs)
 
-def get_cr_educational_use(resource_content_tags):
+def get_cr_educational_use(course_feature_tags):
     tags = ["Curriculum/Instruction"]
-    assessment_flag = any("Assignment" in tag for tag in resource_content_tags)
-    professional_dev_flag = "Instructor Insights" in resource_content_tags
+    assessment_flag = any("Assignment" in tag for tag in course_feature_tags)
+    professional_dev_flag = "Instructor Insights" in course_feature_tags
 
     if assessment_flag:
         tags.append("Assessment")
@@ -39,9 +40,9 @@ def get_cr_educational_use(resource_content_tags):
 
     return "|".join(tags)
 
-def get_cr_accessibility(resource_content_tags):
+def get_cr_accessibility(course_feature_tags):
     tags = ["Visual|Textual"]
-    video_flag = any("Video" in tag for tag in resource_content_tags)
+    video_flag = any("Video" in tag for tag in course_feature_tags)
 
     if video_flag:
         tags.append("Auditory|Caption|Transcript")
@@ -72,8 +73,8 @@ def process_single_result(result, ocw_topics_mapping):
             "CR_PROVIDER_SET": "MIT OpenCourseWare",
             "CR_COU_URL": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
             "CR_COU_COPYRIGHT_HOLDER": "MIT",
-            "CR_EDUCATIONAL_USE": get_cr_educational_use(result["resource_content_tags"]),
-            "CR_ACCESSIBILITY": get_cr_accessibility(result["resource_content_tags"])
+            "CR_EDUCATIONAL_USE": get_cr_educational_use(result["course_feature"]),
+            "CR_ACCESSIBILITY": get_cr_accessibility(result["course_feature"])
         }
     return None
 
@@ -81,7 +82,7 @@ def process_data(data, ocw_topics_mapping):
     return [result for result in (process_single_result(result, ocw_topics_mapping) for result in data) if result is not None]
 
 def main():
-    api_url = getenv('API_URL')
+    # api_data_json = fetch_all_data_from_api(api_url=API_URL)
     api_data_json = load_data_from_json("api_data.json")
     ocw_topics_mapping = create_ocw_topic_to_oer_subject_mapping()
     processed_data = process_data(api_data_json, ocw_topics_mapping)
@@ -89,8 +90,8 @@ def main():
                "CR_COU_TITLE", "CR_PRIMARY_USER", "CR_SUBJECT", "CR_KEYWORDS", "CR_AUTHOR_NAME", "CR_PROVIDER",
                "CR_PROVIDER_SET", "CR_COU_URL", "CR_COU_COPYRIGHT_HOLDER", "CR_EDUCATIONAL_USE", "CR_ACCESSIBILITY"]
     final_df = pd.DataFrame(processed_data, columns=columns)
-    print(final_df)
     final_df.to_csv('transformed_data.csv', index=False)
+    logger.info("File has been successfully created.")
 
 if __name__ == "__main__":
     main()
