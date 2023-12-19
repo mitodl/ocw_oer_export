@@ -1,5 +1,5 @@
 requests
 pandas
-python-dotenv
 bs4
 markdown
+retry
