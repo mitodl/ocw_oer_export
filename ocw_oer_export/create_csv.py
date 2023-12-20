@@ -5,7 +5,7 @@ import logging
 from .client import fetch_all_data_from_api
 from .data_loader import load_data_from_json
 from .constants import API_URL
-from .utilities import cleanup_empty_brackets, html_to_text, markdown_to_text
+from .utilities import cleanup_curly_brackets, html_to_text, markdown_to_text
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -59,7 +59,7 @@ def get_cr_accessibility(course_feature_tags):
 def get_description_in_plain_text(description):
     stripped_markdown = markdown_to_text(description)
     stripped_html = html_to_text(stripped_markdown)
-    plain_description = cleanup_empty_brackets(stripped_html)
+    plain_description = cleanup_curly_brackets(stripped_html)
     return plain_description
 
 def process_single_result(result, ocw_topics_mapping):
