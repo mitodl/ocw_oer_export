@@ -1,7 +1,7 @@
 import requests
 import logging
 from retry import retry
-from data_loader import save_data_to_json
+from .data_loader import save_data_to_json
 
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)

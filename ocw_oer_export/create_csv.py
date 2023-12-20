@@ -1,17 +1,25 @@
+import os.path
 import pandas as pd
 import logging
 from pathlib import Path
 
-from client import fetch_all_data_from_api
-from data_loader import load_data_from_json
-from constants import API_URL
-from utilities import cleanup_empty_brackets, html_to_text, markdown_to_text
+from .client import fetch_all_data_from_api
+from .data_loader import load_data_from_json
+from .constants import API_URL
+from .utilities import cleanup_empty_brackets, html_to_text, markdown_to_text
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def create_ocw_topic_to_oer_subject_mapping(filename=Path('mapping_files') / 'ocw_topic_to_oer_subject.csv'):
-    ocw_topic_to_subject = pd.read_csv(filename)
+def create_ocw_topic_to_oer_subject_mapping(path=None, file_name=None):
+    if path is None:
+        path = os.path.dirname(__file__)
+
+    if file_name is None:
+        file_name = 'mapping_files/ocw_topic_to_oer_subject.csv'
+
+    file_path = os.path.join(path, file_name)
+    ocw_topic_to_subject = pd.read_csv(file_path)
     ocw_topics_mapping = ocw_topic_to_subject.set_index('OCW Topic')['OER Subject'].to_dict()
     return ocw_topics_mapping
 
@@ -81,7 +89,7 @@ def process_single_result(result, ocw_topics_mapping):
 def process_data(data, ocw_topics_mapping):
     return [result for result in (process_single_result(result, ocw_topics_mapping) for result in data) if result is not None]
 
-def main():
+def create_csv():
     # api_data_json = fetch_all_data_from_api(api_url=API_URL)
     api_data_json = load_data_from_json("api_data.json")
     ocw_topics_mapping = create_ocw_topic_to_oer_subject_mapping()
@@ -92,6 +100,3 @@ def main():
     final_df = pd.DataFrame(processed_data, columns=columns)
     final_df.to_csv('transformed_data.csv', index=False)
     logger.info("File has been successfully created.")
-
-if __name__ == "__main__":
-    main()
