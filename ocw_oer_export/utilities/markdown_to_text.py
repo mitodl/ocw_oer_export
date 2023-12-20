@@ -1,5 +1,9 @@
-from markdown import Markdown
+"""
+Module for converting Markdown to plain text.
+"""
 from io import StringIO
+from markdown import Markdown
+
 
 def unmark_element(element, stream=None):
     """Helper function to recursively extract text from Markdown elements."""
@@ -12,6 +16,7 @@ def unmark_element(element, stream=None):
     if element.tail:
         stream.write(element.tail)
     return stream.getvalue()
+
 
 # patching Markdown
 Markdown.output_formats["plain"] = unmark_element
