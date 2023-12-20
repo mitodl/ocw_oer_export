@@ -15,7 +15,7 @@ def create_ocw_topic_to_oer_subject_mapping(path=None, file_name=None):
         path = os.path.dirname(__file__)
 
     if file_name is None:
-        file_name = 'mapping_files/ocw_topic_to_oer_subject.csv'
+        file_name = "mapping_files/ocw_topic_to_oer_subject.csv"
 
     file_path = os.path.join(path, file_name)
     ocw_topic_to_subject = pd.read_csv(file_path)
@@ -88,10 +88,10 @@ def process_single_result(result, ocw_topics_mapping):
 def process_data(data, ocw_topics_mapping):
     return [result for result in (process_single_result(result, ocw_topics_mapping) for result in data) if result is not None]
 
-def create_csv(source='api', output_file="ocw_oer_export.csv"):
-    if source == 'api':
+def create_csv(source="api", output_file="ocw_oer_export.csv"):
+    if source == "api":
         api_data_json = fetch_all_data_from_api(api_url=API_URL)
-    elif source == 'json':
+    elif source == "json":
         api_data_json = load_data_from_json("ocw_api_data.json")
     else:
         raise ValueError("Invalid source. Use 'api' or 'json'.")
