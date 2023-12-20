@@ -1,13 +1,12 @@
 import requests
 import logging
 from retry import retry
-from .data_loader import save_data_to_json
 
-logging.basicConfig(level=logging.WARNING)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 @retry(tries=3, delay=2, logger=logger)
-def fetch_all_data_from_api(api_url, limit=100, output_file='api_data.json'):
+def fetch_all_data_from_api(api_url, limit=100):
     api_data = []
     local_count = 0  # Local count of objects accumulated
 
@@ -29,7 +28,5 @@ def fetch_all_data_from_api(api_url, limit=100, output_file='api_data.json'):
 
     except requests.RequestException as e:
         logger.error(f"Error fetching data from API: {e}")
-    else:
-        save_data_to_json(api_data, output_file)
 
     return api_data

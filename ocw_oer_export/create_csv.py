@@ -1,7 +1,6 @@
 import os.path
 import pandas as pd
 import logging
-from pathlib import Path
 
 from .client import fetch_all_data_from_api
 from .data_loader import load_data_from_json
@@ -89,14 +88,18 @@ def process_single_result(result, ocw_topics_mapping):
 def process_data(data, ocw_topics_mapping):
     return [result for result in (process_single_result(result, ocw_topics_mapping) for result in data) if result is not None]
 
-def create_csv():
-    # api_data_json = fetch_all_data_from_api(api_url=API_URL)
-    api_data_json = load_data_from_json("api_data.json")
+def create_csv(source='api', output_file="ocw_oer_export.csv"):
+    if source == 'api':
+        api_data_json = fetch_all_data_from_api(api_url=API_URL)
+    elif source == 'json':
+        api_data_json = load_data_from_json("api_data.json")
+    else:
+        raise ValueError("Invalid source. Use 'api' or 'json'.")
     ocw_topics_mapping = create_ocw_topic_to_oer_subject_mapping()
     processed_data = process_data(api_data_json, ocw_topics_mapping)
     columns = ["CR_TITLE", "CR_URL", "CR_MATERIAL_TYPE", "CR_Media_Formats", "CR_ABSTRACT", "CR_LANGUAGE",
                "CR_COU_TITLE", "CR_PRIMARY_USER", "CR_SUBJECT", "CR_KEYWORDS", "CR_AUTHOR_NAME", "CR_PROVIDER",
                "CR_PROVIDER_SET", "CR_COU_URL", "CR_COU_COPYRIGHT_HOLDER", "CR_EDUCATIONAL_USE", "CR_ACCESSIBILITY"]
     final_df = pd.DataFrame(processed_data, columns=columns)
-    final_df.to_csv('transformed_data.csv', index=False)
-    logger.info("File has been successfully created.")
+    final_df.to_csv(output_file, index=False)
+    logger.info(f"CSV file {output_file} successfully created at present directory.")
