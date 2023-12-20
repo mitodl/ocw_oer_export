@@ -92,7 +92,7 @@ def create_csv(source='api', output_file="ocw_oer_export.csv"):
     if source == 'api':
         api_data_json = fetch_all_data_from_api(api_url=API_URL)
     elif source == 'json':
-        api_data_json = load_data_from_json("api_data.json")
+        api_data_json = load_data_from_json("ocw_api_data.json")
     else:
         raise ValueError("Invalid source. Use 'api' or 'json'.")
     ocw_topics_mapping = create_ocw_topic_to_oer_subject_mapping()
