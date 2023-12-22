@@ -1,12 +1,13 @@
 """
-Module for creating OER-template CSV file with data fetched from MIT OpenCourseWare API.
+Module for creating OER-template CSV file with data extracted from MIT OpenCourseWare API.
 """
+import csv
 import os.path
 import logging
 import pandas as pd
 
-from .client import fetch_data_from_api
-from .data_handler import load_data_from_json
+from .client import extract_data_from_api
+from .data_handler import extract_data_from_json
 from .constants import API_URL
 from .utilities import cleanup_curly_brackets, html_to_text, markdown_to_text
 
@@ -15,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 def create_ocw_topic_to_oer_subject_mapping(path=None, file_name=None):
-    """Create a mapping between OCW topics and OER subjects."""
+    """Returns a mapping (dictionary) of OCW topics to OER subjects."""
     if path is None:
         path = os.path.dirname(__file__)
 
@@ -23,11 +24,9 @@ def create_ocw_topic_to_oer_subject_mapping(path=None, file_name=None):
         file_name = "mapping_files/ocw_topic_to_oer_subject.csv"
 
     file_path = os.path.join(path, file_name)
-    ocw_topic_to_subject = pd.read_csv(file_path)
-    ocw_topics_mapping = ocw_topic_to_subject.set_index("OCW Topic")[
-        "OER Subject"
-    ].to_dict()
-    return ocw_topics_mapping
+    with open(file_path, newline="", encoding="utf-8") as csvfile:
+        reader = csv.DictReader(csvfile)
+        return {row["OCW Topic"]: row["OER Subject"] for row in reader}
 
 
 def get_cr_subjects(ocw_topics_mapping, ocw_course_topics):
@@ -91,8 +90,8 @@ def get_description_in_plain_text(description):
     return plain_description
 
 
-def process_single_course(course, ocw_topics_mapping):
-    """Process a single course according to OER template."""
+def transform_single_course(course, ocw_topics_mapping):
+    """Transform a single course according to OER template."""
     if course.get("runs"):
         return {
             "CR_TITLE": course["title"],
@@ -118,12 +117,12 @@ def process_single_course(course, ocw_topics_mapping):
     return None
 
 
-def process_data(data, ocw_topics_mapping):
-    """Process all courses and manipulate into OER template format."""
+def transform_data(data, ocw_topics_mapping):
+    """Transform all courses into OER template."""
     return [
         course
         for course in (
-            process_single_course(course, ocw_topics_mapping) for course in data
+            transform_single_course(course, ocw_topics_mapping) for course in data
         )
         if course is not None
     ]
@@ -132,13 +131,16 @@ def process_data(data, ocw_topics_mapping):
 def create_csv(source="api", output_file="ocw_oer_export.csv"):
     """Create a CSV file from either the MIT OpenCourseWare API or a locally stored JSON file."""
     if source == "api":
-        api_data_json = fetch_data_from_api(api_url=API_URL)
+        api_data_json = extract_data_from_api(api_url=API_URL)
+
     elif source == "json":
-        api_data_json = load_data_from_json("ocw_api_data.json")
+        api_data_json = extract_data_from_json("ocw_api_data.json")
+
     else:
         raise ValueError("Invalid source. Use 'api' or 'json'.")
+
     ocw_topics_mapping = create_ocw_topic_to_oer_subject_mapping()
-    processed_data = process_data(api_data_json, ocw_topics_mapping)
+    transformed_data = transform_data(api_data_json, ocw_topics_mapping)
     columns = [
         "CR_TITLE",
         "CR_URL",
@@ -158,6 +160,6 @@ def create_csv(source="api", output_file="ocw_oer_export.csv"):
         "CR_EDUCATIONAL_USE",
         "CR_ACCESSIBILITY",
     ]
-    final_df = pd.DataFrame(processed_data, columns=columns)
+    final_df = pd.DataFrame(transformed_data, columns=columns)
     final_df.to_csv(output_file, index=False)
     logger.info("CSV file %s successfully created at present directory.", output_file)
