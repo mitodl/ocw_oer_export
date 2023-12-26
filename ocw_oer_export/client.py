@@ -4,8 +4,9 @@ Module for interacting with the MIT OpenCourseWare API.
 import logging
 import requests
 from retry import retry
+from tqdm import tqdm
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger(__name__)
 
 
@@ -31,25 +32,18 @@ def paginated_response(api_url, page_size=100):
 
 def extract_data_from_api(api_url):
     """Extract all data from the MIT OpenCourseWare API."""
-    api_data = []
-    local_objects_count = 0  # Local count of objects accumulated
-    total_objects_count = None  # Total count of objects
-    pages = paginated_response(api_url)
+    page_size = 100
+    pages = paginated_response(api_url, page_size)
 
-    for page in pages:
+    first_page = next(pages)
+    api_data = first_page.get("results", [])
+    total_pages = first_page["count"] / page_size
+
+    # Remaining pages
+    for page in tqdm(
+        pages, desc="Loading data from MIT OCW API", total=total_pages - 1
+    ):
         page_results = page.get("results", [])
         api_data.extend(page_results)
-
-        # Update the local count
-        local_objects_count += len(page_results)
-
-        # Update the total count if not set
-        if total_objects_count is None and "count" in page:
-            total_objects_count = page["count"]
-
-        # Calculate the progress percentage
-        if total_objects_count is not None and total_objects_count != 0:
-            progress_percentage = (local_objects_count / total_objects_count) * 100
-            logger.info("API loaded - Progress: %.2f%%", progress_percentage)
 
     return api_data
