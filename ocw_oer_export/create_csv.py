@@ -4,7 +4,6 @@ Module for creating OER-template CSV file with data extracted from MIT OpenCours
 import csv
 import os.path
 import logging
-import pandas as pd
 
 from .client import extract_data_from_api
 from .data_handler import extract_data_from_json
@@ -130,6 +129,8 @@ def transform_data(data, ocw_topics_mapping):
 
 def create_csv(source="api", output_file="ocw_oer_export.csv"):
     """Create a CSV file from either the MIT OpenCourseWare API or a locally stored JSON file."""
+    api_data_json = {}
+
     if source == "api":
         api_data_json = extract_data_from_api(api_url=API_URL)
 
@@ -141,7 +142,7 @@ def create_csv(source="api", output_file="ocw_oer_export.csv"):
 
     ocw_topics_mapping = create_ocw_topic_to_oer_subject_mapping()
     transformed_data = transform_data(api_data_json, ocw_topics_mapping)
-    columns = [
+    fieldnames = [
         "CR_TITLE",
         "CR_URL",
         "CR_MATERIAL_TYPE",
@@ -160,6 +161,9 @@ def create_csv(source="api", output_file="ocw_oer_export.csv"):
         "CR_EDUCATIONAL_USE",
         "CR_ACCESSIBILITY",
     ]
-    final_df = pd.DataFrame(transformed_data, columns=columns)
-    final_df.to_csv(output_file, index=False)
+    with open(output_file, "w", newline="", encoding="utf-8") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(transformed_data)
+
     logger.info("CSV file %s successfully created at present directory.", output_file)
