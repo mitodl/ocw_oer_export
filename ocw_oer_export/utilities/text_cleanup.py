@@ -7,10 +7,14 @@ from io import StringIO
 from markdown import Markdown
 
 
-def cleanup_curly_brackets(string):
-    """Remove content within curly brackets (including the brackets) from the input string."""
-    pattern = re.compile("{.*?}")
-    return re.sub(pattern, "", string)
+def cleanup_curly_brackets(text):
+    """
+    Remove content within curly brackets, including the brackets themselves, from the input string.
+    Also remove any lines that become empty as a result of this removal.
+    """
+    pattern = re.compile(r"\{\{.*?\}\}\n?")
+    cleaned_text = re.sub(pattern, "", text)
+    return cleaned_text
 
 
 def html_to_text(html):
@@ -56,5 +60,5 @@ def text_cleanup(text):
     """
     stripped_markdown = markdown_to_text(text)
     stripped_html = html_to_text(stripped_markdown)
-    cleaned_text = cleanup_curly_brackets(stripped_html)
-    return cleaned_text
+    stripped_curly_brackets = cleanup_curly_brackets(stripped_html)
+    return stripped_curly_brackets

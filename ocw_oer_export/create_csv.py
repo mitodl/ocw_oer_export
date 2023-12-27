@@ -84,8 +84,8 @@ def get_cr_accessibility(course_feature_tags):
 
 def get_description_in_plain_text(description):
     """Get Course Resource plain text description by cleaning up markdown and HTML."""
-    plain_description = text_cleanup(description)
-    return plain_description
+    cleaned_description = text_cleanup(description)
+    return cleaned_description
 
 
 def transform_single_course(course, ocw_topics_mapping):
