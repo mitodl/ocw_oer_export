@@ -5,10 +5,11 @@ import csv
 import os.path
 import logging
 
+
 from .client import extract_data_from_api
 from .data_handler import extract_data_from_json
 from .constants import API_URL
-from .utilities import cleanup_curly_brackets, html_to_text, markdown_to_text
+from .utilities import text_cleanup
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -83,9 +84,7 @@ def get_cr_accessibility(course_feature_tags):
 
 def get_description_in_plain_text(description):
     """Get Course Resource plain text description by cleaning up markdown and HTML."""
-    stripped_markdown = markdown_to_text(description)
-    stripped_html = html_to_text(stripped_markdown)
-    plain_description = cleanup_curly_brackets(stripped_html)
+    plain_description = text_cleanup(description)
     return plain_description
 
 
