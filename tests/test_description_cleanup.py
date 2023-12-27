@@ -2,23 +2,23 @@ import unittest
 from ocw_oer_export.utilities import text_cleanup
 
 
-class DescriptionCleanupTest(unittest.TestCase):
+class DescriptionCleanupTests(unittest.TestCase):
     """Test suite for verifying the functionality of the description cleanup process."""
 
     def test_markdown_bold_removal(self):
-        """Test if markdown bold syntax is removed."""
+        """Test that markdown bold syntax is removed."""
         sample_text = "**2\. Adherence to guidelines (10% total grade):**"
         cleaned_text = text_cleanup(sample_text)
         self.assertEqual(cleaned_text, "2. Adherence to guidelines (10% total grade):")
 
     def test_markdown_header_removal(self):
-        """Test if markdown header syntax is removed."""
+        """Test that markdown header syntax is removed."""
         sample_text = "### Other Notes"
         cleaned_text = text_cleanup(sample_text)
         self.assertEqual(cleaned_text, "Other Notes")
 
     def test_custom_markup_removal(self):
-        """Test if OCW Studio's custom markup is removed."""
+        """Test that OCW Studio's custom markup is removed."""
         sample_text = (
             "{{< tableopen >}}{{< theadopen >}}{{< tropen >}}"
             "{{< thopen >}}Points{{< thclose >}}{{< thopen >}}"
