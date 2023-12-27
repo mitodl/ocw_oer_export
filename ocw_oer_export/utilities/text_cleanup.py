@@ -60,5 +60,5 @@ def text_cleanup(text):
     """
     stripped_markdown = markdown_to_text(text)
     stripped_html = html_to_text(stripped_markdown)
-    stripped_curly_brackets = cleanup_curly_brackets(stripped_html)
-    return stripped_curly_brackets
+    cleaned_text = cleanup_curly_brackets(stripped_html)
+    return cleaned_text
