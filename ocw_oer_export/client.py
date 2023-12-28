@@ -45,7 +45,6 @@ def extract_data_from_api(api_url):
         pages,
         desc="Loading data from MIT OCW API",
         total=total_pages - 1,
-        dynamic_ncols=True,
     ):
         page_results = page.get("results", [])
         api_data.extend(page_results)
