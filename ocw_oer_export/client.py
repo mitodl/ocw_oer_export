@@ -1,6 +1,7 @@
 """
 Module for interacting with the MIT OpenCourseWare API.
 """
+import math
 import logging
 import requests
 from retry import retry
@@ -37,11 +38,14 @@ def extract_data_from_api(api_url):
 
     first_page = next(pages)
     api_data = first_page.get("results", [])
-    total_pages = first_page["count"] / page_size
+    total_pages = math.ceil(first_page["count"] / page_size)
 
     # Remaining pages
     for page in tqdm(
-        pages, desc="Loading data from MIT OCW API", total=total_pages - 1
+        pages,
+        desc="Loading data from MIT OCW API",
+        total=total_pages - 1,
+        dynamic_ncols=True,
     ):
         page_results = page.get("results", [])
         api_data.extend(page_results)
