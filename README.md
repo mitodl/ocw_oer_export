@@ -42,24 +42,24 @@ create_csv(source="json")
 
 ### CLI Usage
 
-`ocw_oer_export` also provides a Command Line Interface (CLI):
+`ocw_oer_export` also provides a Command Line Interface (CLI). After installation, you can use the following commands:
 
 To create the CSV file:
 
 ```
-python3 main.py --create_csv
+ocw-oer-export --create_csv
 ```
 
 To generate a JSON file:
 
 ```
-python3 main.py --create_json
+ocw-oer-export --create_json
 ```
 
 To create a CSV file from the local JSON file:
 
 ```
-python3 main.py --create_csv --source=json
+ocw-oer-export --create_csv --source=json
 ```
 
 ## File Output Directory
