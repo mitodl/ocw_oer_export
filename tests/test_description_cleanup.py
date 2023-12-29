@@ -38,8 +38,7 @@ class DescriptionCleanupTests(unittest.TestCase):
 
     def test_empty_curly_brackets_removal(self):
         """Test the removal of content within curly brackets and subsequent empty lines."""
-        sample_text = "CHINESE COURSES\n{{}}\n{{}}\nCOURSE SITES"
-        sample_text = sample_text.replace("\xa0", " ")
+        sample_text = "CHINESE COURSES\n{{}}\n{{}}\nCOURSE SITES"
         cleaned_text = text_cleanup(sample_text)
         expected_description = "CHINESE COURSES\nCOURSE SITES"
         self.assertEqual(cleaned_text, expected_description)
