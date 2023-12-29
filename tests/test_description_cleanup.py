@@ -7,7 +7,7 @@ class DescriptionCleanupTests(unittest.TestCase):
 
     def test_markdown_bold_removal(self):
         """Test that markdown bold syntax is removed."""
-        sample_text = "**2\. Adherence to guidelines (10% total grade):**"
+        sample_text = r"**2\. Adherence to guidelines (10% total grade):**"
         cleaned_text = text_cleanup(sample_text)
         self.assertEqual(cleaned_text, "2. Adherence to guidelines (10% total grade):")
 
