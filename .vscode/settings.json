@@ -1,5 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "./ocw_oer_export"
-    ]
-}
