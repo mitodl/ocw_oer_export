@@ -1,8 +1,17 @@
+"""
+Command-line interface (CLI) for the OCW OER Export Project.
+
+This module provides a CLI to generate JSON or CSV files containing
+MIT OpenCourseWare courses' metadata.
+"""
 import argparse
 from ocw_oer_export import create_csv, create_json
 
 
 def main():
+    """
+    Parses command-line arguments and executes the appropriate function.
+    """
     parser = argparse.ArgumentParser(description="OCW OER Export")
 
     parser.add_argument("--create_csv", action="store_true", help="Create CSV file")
@@ -21,8 +30,4 @@ def main():
     elif args.create_json:
         create_json()
     else:
-        print("Please specify either --create_csv or --create_json.")
-
-
-if __name__ == "__main__":
-    main()
+        parser.print_help()

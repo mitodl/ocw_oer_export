@@ -1,6 +1,6 @@
 # OCW OER Export
 
-This is a demonstration project for showing how to use MIT Open API. Specifically, this project extracts MIT OpenCourseWare courses' data and creates a CSV file to be exported to OER Commons [according to their requirements](https://help.oercommons.org/support/solutions/articles/42000046853-import-resources-with-the-bulk-import-template).
+This demonstration project showcases how to utilize the MIT Open API. It specifically focuses on extracting MIT OpenCourseWare courses' metadata and creating a CSV file for export to OER Commons, aligning with their specific [requirements](https://help.oercommons.org/support/solutions/articles/42000046853-import-resources-with-the-bulk-import-template).
 
 **SECTIONS**
 
@@ -12,58 +12,74 @@ This is a demonstration project for showing how to use MIT Open API. Specificall
 
 ## Initial Setup & Usage
 
-_ocw_oer_export_ is available [on PyPI](link). To install:
+The _ocw_oer_export_ package is available [on PyPI](link). To install:
 
 ```
 pip install ocw_oer_export
 ```
 
-To use it:
+### Usage as a Python Package
+
+To use `ocw_oer_export` in your Python code:
 
 ```
 from ocw_oer_export import create_csv
 create_csv()
 ```
-By default, the `create_csv` function accepts `source="api"` and `output_file="ocw_oer_export.csv"` parameters, allowing customization of data sources and output filenames. The output file is generated in the current directory.
 
-The source parameter can be changed to `source="json"` if a JSON file is available. JSON can be created as:
+By default, the `create_csv` function uses `source="api"` and `output_file="ocw_oer_export.csv"`. The `source` parameter can be altered to `source="json"` if a local JSON file of courses' metadata is available. To generate the JSON file:
 
 ```
 from ocw_oer_export import create_json
 create_json()
 ```
 
-This command generates a JSON file in the current directory. It can then be used as:
+Then, create the CSV from the JSON file:
 
 ```
 create_csv(source="json")
 ```
 
-A CLI interface is available as well, which can be used in a similar manner:
+### CLI Usage
+
+`ocw_oer_export` also provides a Command Line Interface (CLI):
+
+To create the CSV file:
 
 ```
 python3 main.py --create_csv
 ```
-OR
+
+To generate a JSON file:
 
 ```
 python3 main.py --create_json
-python3 main.py --create_csv(source=json)
 ```
 
+To create a CSV file from the local JSON file:
+
+```
+python3 main.py --create_csv --source=json
+```
+
+## File Output Directory
+
+When using either the Python package or the CLI, the output files (CSV or JSON) are saved in the current working directory from which it is executed.
+
 ## Requirements
-To ensure successful execution and correct output, confirm the presence of the following fields in the [MIT Open's API](https://mit-open-rc.odl.mit.edu//api/v1/courses/?platform=ocw):
+
+For successful execution and correct output, ensure the [MIT Open's API](https://mit-open-rc.odl.mit.edu//api/v1/courses/?platform=ocw) contains the following fields:
 
 `title`, `url`, `description`, `topics`, `course_feature`, `runs: instructors`
 
-Additionally, ensure that the `mapping_files` are up-to-date. For example, if OCW introduces a new topic not mapped in `ocw_oer_export/mapping_files/ocw_topic_to_oer_subject.csv`, it results in `null` entries for that topic in the CSV (`CR_SUBJECT`).
+Additionally, the `mapping_files` should be up-to-date. If new topics are added in OCW without corresponding mappings in `ocw_oer_export/mapping_files/ocw_topic_to_oer_subject.csv`, this will lead to `null` entries for those topics in the CSV (`CR_SUBJECT`).
 
 ## Tests
 
 To run unit tests:
 
 ```
-python -m tests discover
+python -m unittest discover
 ```
 
 ## Committing & Formatting

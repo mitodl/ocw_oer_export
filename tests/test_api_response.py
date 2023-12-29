@@ -28,7 +28,3 @@ class APITestCase(unittest.TestCase):
         self.assertIn("topics", item)
         self.assertIn("course_feature", item)
         self.assertIn("instructors", item["runs"][0])
-
-
-if __name__ == "__main__":
-    unittest.main()

@@ -43,7 +43,3 @@ class DescriptionCleanupTests(unittest.TestCase):
         cleaned_text = text_cleanup(sample_text)
         expected_description = "CHINESE COURSES\nCOURSE SITES"
         self.assertEqual(cleaned_text, expected_description)
-
-
-if __name__ == "__main__":
-    unittest.main()
