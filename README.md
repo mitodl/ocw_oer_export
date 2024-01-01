@@ -87,7 +87,7 @@ python -m unittest discover
 To ensure commits to GitHub are safe, first install [pre-commit](https://pre-commit.com/):
 
 ```
-pip install pre_commit
+pip install pre-commit
 pre-commit install
 ```
 
