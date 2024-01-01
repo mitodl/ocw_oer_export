@@ -5,7 +5,8 @@ This module provides a CLI to generate JSON or CSV files containing
 MIT OpenCourseWare courses' metadata.
 """
 import argparse
-from ocw_oer_export import create_csv, create_json
+from .create_csv import create_csv
+from .create_json import create_json
 
 
 def main():
@@ -31,3 +32,7 @@ def main():
         create_json()
     else:
         parser.print_help()
+
+
+if __name__ == "__main__":
+    main()

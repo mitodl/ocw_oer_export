@@ -2,7 +2,7 @@
 Module for creating OER-template CSV file with data extracted from MIT OpenCourseWare API.
 """
 import csv
-import os.path
+import os
 import logging
 
 
@@ -10,9 +10,6 @@ from .client import extract_data_from_api
 from .data_handler import extract_data_from_json
 from .constants import API_URL
 from .utilities import text_cleanup
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 
 def create_ocw_topic_to_oer_subject_mapping(path=None, file_name=None):
@@ -165,4 +162,9 @@ def create_csv(source="api", output_file="ocw_oer_export.csv"):
         writer.writeheader()
         writer.writerows(transformed_data)
 
-    logger.info("CSV file %s successfully created at present directory.", output_file)
+        current_dir = os.getcwd()
+        logging.info(
+            "CSV file '%s' successfully created at current directory: %s",
+            output_file,
+            current_dir,
+        )
