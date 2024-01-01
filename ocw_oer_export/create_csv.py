@@ -93,6 +93,7 @@ def transform_single_course(course, ocw_topics_mapping):
             "CR_URL": course["runs"][0]["url"],
             "CR_MATERIAL_TYPE": "Full Course",
             "CR_Media_Formats": "Text/HTML",
+            "CR_SUBLEVEL": "null",
             "CR_ABSTRACT": get_description_in_plain_text(
                 course["runs"][0]["description"]
             ),
@@ -143,6 +144,7 @@ def create_csv(source="api", output_file="ocw_oer_export.csv"):
         "CR_URL",
         "CR_MATERIAL_TYPE",
         "CR_Media_Formats",
+        "CR_SUBLEVEL",
         "CR_ABSTRACT",
         "CR_LANGUAGE",
         "CR_COU_TITLE",
