@@ -13,7 +13,13 @@ from .utilities import text_cleanup
 
 
 def create_ocw_topic_to_oer_subject_mapping(path=None, file_name=None):
-    """Returns a mapping (dictionary) of OCW topics to OER subjects."""
+    """
+    Create a mapping from OCW (OpenCourseWare) topics to OER (Open Educational Resources) subjects.
+
+    This function reads a CSV file containing mappings specified by the arguments.
+    It creates a dictionary where keys are OCW topics and values are the corresponding OER subjects.
+    The function does not perform any manipulation on the mapping data.
+    """
     if path is None:
         path = os.path.dirname(__file__)
 
@@ -27,7 +33,12 @@ def create_ocw_topic_to_oer_subject_mapping(path=None, file_name=None):
 
 
 def get_cr_subjects(ocw_topics_mapping, ocw_course_topics):
-    """Get Course Resource Subjects based on OCW topics."""
+    """
+    Get OER formatted Course Resource Subjects list.
+
+    Since distinct OCW topics can map to the same OER subject, duplicate subject
+    values are omitted.
+    """
     oer_subjects_list = [
         ocw_topics_mapping.get(topic["name"]).split("|")
         if ocw_topics_mapping.get(topic["name"]) is not None
@@ -41,12 +52,12 @@ def get_cr_subjects(ocw_topics_mapping, ocw_course_topics):
 
 
 def get_cr_keywords(list_of_topics_objs):
-    """Get Course Resource Keywords from a list of OCW topic objects."""
+    """Get OER formatted Course Resource Keywords from a list of OCW topic objects."""
     return "|".join(topic["name"] for topic in list_of_topics_objs)
 
 
 def get_cr_authors(list_of_authors_objs):
-    """Get Course Resource Authors from a list of OCW author objects."""
+    """Get OER formatted Course Resource Authors list."""
     return "|".join(
         f"{author['last_name']}, {author['first_name']}"
         for author in list_of_authors_objs
@@ -54,7 +65,14 @@ def get_cr_authors(list_of_authors_objs):
 
 
 def get_cr_educational_use(course_feature_tags):
-    """Get Course Resource Educational Use based on course feature tags."""
+    """
+    Get OER formatted Course Resource Educational Uses list based on OCW Course Feature tags.
+
+    This function analyzes the feature tags of a course and includes:
+    - 'Curriculum', and 'Instruction' for every course
+    - 'Assessment' if the feature tags include 'Assignment'.
+    - 'Professional Development' if the feature tags include 'Instructor Insights'.
+    """
     tags = ["Curriculum/Instruction"]
     assessment_flag = any("Assignment" in tag for tag in course_feature_tags)
     professional_dev_flag = "Instructor Insights" in course_feature_tags
@@ -69,7 +87,13 @@ def get_cr_educational_use(course_feature_tags):
 
 
 def get_cr_accessibility(course_feature_tags):
-    """Get Course Resource Accessibility tags based on course feature tags."""
+    """
+    Get OER formatted Course Resource Accessibility tags list based on OCW Course Feature tags.
+
+    This function analyzes the feature tags of a course and includes:
+    - 'Visual', and 'Textual' for every course
+    - 'Auditory', 'Caption', and 'Transcript'  if the feature tags include 'Video'.
+    """
     tags = ["Visual|Textual"]
     video_flag = any("Video" in tag for tag in course_feature_tags)
 
