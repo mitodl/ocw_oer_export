@@ -64,7 +64,7 @@ def get_cr_authors(list_of_authors_objs):
     )
 
 
-def get_cr_educational_use(course_feature_tags):
+def get_cr_educational_use(ocw_course_feature_tags):
     """
     Get OER formatted Course Resource Educational Uses list based on OCW Course Feature tags.
 
@@ -74,8 +74,8 @@ def get_cr_educational_use(course_feature_tags):
     - 'Professional Development' if the feature tags include 'Instructor Insights'.
     """
     tags = ["Curriculum/Instruction"]
-    assessment_flag = any("Assignment" in tag for tag in course_feature_tags)
-    professional_dev_flag = "Instructor Insights" in course_feature_tags
+    assessment_flag = any("Assignment" in tag for tag in ocw_course_feature_tags)
+    professional_dev_flag = "Instructor Insights" in ocw_course_feature_tags
 
     if assessment_flag:
         tags.append("Assessment")
@@ -86,7 +86,7 @@ def get_cr_educational_use(course_feature_tags):
     return "|".join(tags)
 
 
-def get_cr_accessibility(course_feature_tags):
+def get_cr_accessibility(ocw_course_feature_tags):
     """
     Get OER formatted Course Resource Accessibility tags list based on OCW Course Feature tags.
 
@@ -95,7 +95,7 @@ def get_cr_accessibility(course_feature_tags):
     - 'Auditory', 'Caption', and 'Transcript'  if the feature tags include 'Video'.
     """
     tags = ["Visual|Textual"]
-    video_flag = any("Video" in tag for tag in course_feature_tags)
+    video_flag = any("Video" in tag for tag in ocw_course_feature_tags)
 
     if video_flag:
         tags.append("Auditory|Caption|Transcript")
