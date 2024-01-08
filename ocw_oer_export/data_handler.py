@@ -24,12 +24,12 @@ def load_data_to_json(data, file_path):
         logging.info("Data successfully saved: %s.", file_path)
 
 
-def extract_data_from_csv(file_path):
-    """Extract data from a CSV file."""
+def extract_data_from_file(file_path):
+    """Read file using readlines()"""
     try:
-        with open(file_path, "r", encoding="utf-8") as csv_file:
-            csv_data = csv_file.readlines()
+        with open(file_path, "r", encoding="utf-8") as file:
+            data = file.readlines()
             logging.info("Data successfully extracted from %s.", file_path)
-            return csv_data
+            return data
     except FileNotFoundError as exc:
         raise FileNotFoundError(f"{file_path} not found.") from exc

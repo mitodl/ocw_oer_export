@@ -1,7 +1,7 @@
 import os
 import unittest
 from ocw_oer_export.create_csv import create_csv
-from ocw_oer_export.data_handler import extract_data_from_csv
+from ocw_oer_export.data_handler import extract_data_from_file
 from ocw_oer_export.utilities import delete_file
 
 
@@ -23,8 +23,8 @@ class CSVCreationTestCase(unittest.TestCase):
             input_file=self.sample_json_path,
             output_file=self.generated_csv_path,
         )
-        generated_csv_data = extract_data_from_csv(self.generated_csv_path)
-        expected_csv_data = extract_data_from_csv(self.expected_csv_path)
+        generated_csv_data = extract_data_from_file(self.generated_csv_path)
+        expected_csv_data = extract_data_from_file(self.expected_csv_path)
 
         self.assertEqual(
             generated_csv_data,
