@@ -48,7 +48,8 @@ def get_cr_subjects(ocw_topics_mapping, ocw_course_topics):
     unique_oer_subjects = set(
         subject for subjects in oer_subjects_list for subject in subjects
     )
-    return "|".join(unique_oer_subjects)
+    sorted_unique_oer_subjects = sorted(unique_oer_subjects)
+    return "|".join(sorted_unique_oer_subjects)
 
 
 def get_cr_keywords(list_of_topics_objs):
@@ -111,30 +112,26 @@ def get_description_in_plain_text(description):
 
 def transform_single_course(course, ocw_topics_mapping):
     """Transform a single course according to OER template."""
-    if course.get("runs"):
-        return {
-            "CR_TITLE": course["title"],
-            "CR_URL": course["runs"][0]["url"],
-            "CR_MATERIAL_TYPE": "Full Course",
-            "CR_Media_Formats": "Text/HTML",
-            "CR_SUBLEVEL": "null",
-            "CR_ABSTRACT": get_description_in_plain_text(
-                course["runs"][0]["description"]
-            ),
-            "CR_LANGUAGE": "en",
-            "CR_COU_TITLE": "Creative Commons Attribution Non Commercial Share Alike 4.0",
-            "CR_PRIMARY_USER": "student|teacher",
-            "CR_SUBJECT": get_cr_subjects(ocw_topics_mapping, course["topics"]),
-            "CR_KEYWORDS": get_cr_keywords(course["topics"]),
-            "CR_AUTHOR_NAME": get_cr_authors(course["runs"][0]["instructors"]),
-            "CR_PROVIDER": "MIT",
-            "CR_PROVIDER_SET": "MIT OpenCourseWare",
-            "CR_COU_URL": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-            "CR_COU_COPYRIGHT_HOLDER": "MIT",
-            "CR_EDUCATIONAL_USE": get_cr_educational_use(course["course_feature"]),
-            "CR_ACCESSIBILITY": get_cr_accessibility(course["course_feature"]),
-        }
-    return None
+    return {
+        "CR_TITLE": course["title"],
+        "CR_URL": course["runs"][0]["url"],
+        "CR_MATERIAL_TYPE": "Full Course",
+        "CR_Media_Formats": "Text/HTML",
+        "CR_SUBLEVEL": "null",
+        "CR_ABSTRACT": get_description_in_plain_text(course["runs"][0]["description"]),
+        "CR_LANGUAGE": "en",
+        "CR_COU_TITLE": "Creative Commons Attribution Non Commercial Share Alike 4.0",
+        "CR_PRIMARY_USER": "student|teacher",
+        "CR_SUBJECT": get_cr_subjects(ocw_topics_mapping, course["topics"]),
+        "CR_KEYWORDS": get_cr_keywords(course["topics"]),
+        "CR_AUTHOR_NAME": get_cr_authors(course["runs"][0]["instructors"]),
+        "CR_PROVIDER": "MIT",
+        "CR_PROVIDER_SET": "MIT OpenCourseWare",
+        "CR_COU_URL": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "CR_COU_COPYRIGHT_HOLDER": "MIT",
+        "CR_EDUCATIONAL_USE": get_cr_educational_use(course["resource_content_tags"]),
+        "CR_ACCESSIBILITY": get_cr_accessibility(course["resource_content_tags"]),
+    }
 
 
 def transform_data(data, ocw_topics_mapping):
@@ -148,7 +145,9 @@ def transform_data(data, ocw_topics_mapping):
     ]
 
 
-def create_csv(source="api", output_file="ocw_oer_export.csv"):
+def create_csv(
+    source="api", input_file="ocw_api_data.json", output_file="ocw_oer_export.csv"
+):
     """Create a CSV file from either the MIT OpenCourseWare API or a locally stored JSON file."""
     api_data_json = {}
 
@@ -156,7 +155,7 @@ def create_csv(source="api", output_file="ocw_oer_export.csv"):
         api_data_json = extract_data_from_api(api_url=API_URL)
 
     elif source == "json":
-        api_data_json = extract_data_from_json("ocw_api_data.json")
+        api_data_json = extract_data_from_json(input_file)
 
     else:
         raise ValueError("Invalid source. Use 'api' or 'json'.")
@@ -190,7 +189,7 @@ def create_csv(source="api", output_file="ocw_oer_export.csv"):
 
         current_dir = os.getcwd()
         logging.info(
-            "CSV file '%s' successfully created at current directory: %s",
+            "CSV file '%s' successfully created at directory: %s",
             output_file,
             current_dir,
         )
