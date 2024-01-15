@@ -33,7 +33,7 @@ docker-compose run --rm app  --create_json
 To create a CSV file from the local JSON file:
 
 ```
-docker-compose run --rm app  --create_csv --source=json
+docker-compose run --rm app --source=json
 ```
 
 ## File Output Directory
