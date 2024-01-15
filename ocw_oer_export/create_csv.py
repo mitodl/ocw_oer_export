@@ -147,7 +147,7 @@ def transform_data(data, ocw_topics_mapping):
 
 def create_csv(
     source="api",
-    input_file="ocw_api_data.json",
+    input_file="/output/ocw_api_data.json",
     output_path="/output/ocw_oer_export.csv",
 ):
     """

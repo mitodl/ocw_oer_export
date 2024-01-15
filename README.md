@@ -27,13 +27,13 @@ docker-compose run --rm app
 To generate a JSON file containing complete API data:
 
 ```
-docker-compose run --rm app  --create_json
+docker-compose run --rm app --create_json
 ```
 
 To create a CSV file from the local JSON file:
 
 ```
-docker-compose run --rm app --source=json
+docker-compose run --rm app --create_csv --source=json
 ```
 
 ## File Output Directory
