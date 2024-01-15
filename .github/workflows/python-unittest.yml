@@ -1,12 +1,12 @@
 ---
-name: Python Tests CI
+name: Backend Unit Tests
 on:
     push:
         branches:
         - main
     pull_request:
 jobs:
-  python-tests:
+  python-unittests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
