@@ -57,7 +57,7 @@ Additionally, the `mapping_files` should be up-to-date. If new topics are added 
 To run unit tests:
 
 ```
-docker run --rm ocw_oer_export python -m unittest discover
+docker run --rm ocw_oer_export python -m unittest discover -s tests
 ```
 
 ## Committing & Formatting
