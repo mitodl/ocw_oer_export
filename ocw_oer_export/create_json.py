@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def create_json(output_path="/output/ocw_api_data.json"):
+def create_json(output_path="/private/output/ocw_api_data.json"):
     """
     Fetches data from MIT OpenCourseWare API and writes it to a JSON file.
     output_path: The output path inside the docker container.

@@ -8,4 +8,4 @@ services:
     command: ["--create_csv"]
     tty: true
     volumes:
-      - ./output:/output
+      - ./private/output:/private/output

@@ -147,8 +147,8 @@ def transform_data(data, ocw_topics_mapping):
 
 def create_csv(
     source="api",
-    input_file="/output/ocw_api_data.json",
-    output_path="/output/ocw_oer_export.csv",
+    input_file="/private/output/ocw_api_data.json",
+    output_path="/private/output/ocw_oer_export.csv",
 ):
     """
     Create a CSV file from either the MIT OpenCourseWare API or a locally stored JSON file.
