@@ -38,9 +38,9 @@ docker compose run --rm app --create_csv --source=json
 
 ## File Output Directory
 
-The output files, whether in CSV or JSON format, are stored within the `output` directory relative to the current working directory from which the command is executed.
+The output files, whether in CSV or JSON format, are stored within the `private/output` directory relative to the current working directory from which the command is executed.
 
-Therefore, the above commands will generate `output/ocw_oer_export.csv` or `output/ocw_api_data.json` in the current working directory.
+Therefore, the above commands will generate `private/output/ocw_oer_export.csv` or `private/output/ocw_api_data.json` in the current working directory.
 
 If you want to change this, you will not only have to change the `output_path` in the function (`create_csv` or `create_json`) but also have to change the mapping in `docker-compose.yml`.
 
