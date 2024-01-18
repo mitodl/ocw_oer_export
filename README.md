@@ -15,25 +15,25 @@ This demonstration project showcases how to utilize the MIT Open API. It specifi
 1. Build the container:
 
 ```
-docker-compose build
+docker compose build
 ```
 
 2. Start the container:
 
 ```
-docker-compose run --rm app
+docker compose run --rm app
 ```
 
 To generate a JSON file containing complete API data:
 
 ```
-docker-compose run --rm app --create_json
+docker compose run --rm app --create_json
 ```
 
 To create a CSV file from the local JSON file:
 
 ```
-docker-compose run --rm app --create_csv --source=json
+docker compose run --rm app --create_csv --source=json
 ```
 
 ## File Output Directory
