@@ -161,6 +161,3 @@ cython_debug/
 
 # DS_Store
 .DS_Store
-
-# OER Export JSON and CSV files created
-output/
