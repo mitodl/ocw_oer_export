@@ -161,6 +161,3 @@ cython_debug/
 
 # DS_Store
 .DS_Store
-
-# Private directory containing output directory
-private/
