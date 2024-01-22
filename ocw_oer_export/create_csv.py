@@ -144,21 +144,22 @@ def get_description_in_plain_text(description):
 
 def transform_single_course(course, ocw_topics_mapping, fm_ocw_keywords_mapping):
     """Transform a single course according to OER template."""
+    course_runs = course["runs"][0]
     return {
         "CR_TITLE": course["title"],
-        "CR_URL": course["runs"][0]["url"],
+        "CR_URL": course_runs["url"],
         "CR_MATERIAL_TYPE": "Full Course",
         "CR_Media_Formats": "Text/HTML",
         "CR_SUBLEVEL": "null",
-        "CR_ABSTRACT": get_description_in_plain_text(course["runs"][0]["description"]),
+        "CR_ABSTRACT": get_description_in_plain_text(course_runs["description"]),
         "CR_LANGUAGE": "en",
         "CR_COU_TITLE": "Creative Commons Attribution Non Commercial Share Alike 4.0",
         "CR_PRIMARY_USER": "student|teacher",
         "CR_SUBJECT": get_cr_subjects(ocw_topics_mapping, course["topics"]),
         "CR_KEYWORDS": get_cr_keywords(
-            fm_ocw_keywords_mapping, course["topics"], course["runs"][0]["url"]
+            fm_ocw_keywords_mapping, course["topics"], course_runs["url"]
         ),
-        "CR_AUTHOR_NAME": get_cr_authors(course["runs"][0]["instructors"]),
+        "CR_AUTHOR_NAME": get_cr_authors(course_runs["instructors"]),
         "CR_PROVIDER": "MIT",
         "CR_PROVIDER_SET": "MIT OpenCourseWare",
         "CR_COU_URL": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
