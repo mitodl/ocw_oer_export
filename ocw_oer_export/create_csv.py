@@ -4,13 +4,12 @@ Module for creating OER-template CSV file with data extracted from MIT OpenCours
 import csv
 import os
 import logging
-import re
 
 
 from .client import extract_data_from_api
 from .data_handler import extract_data_from_json
 from .constants import API_URL
-from .utilities import normalize_course_url, text_cleanup
+from .utilities import normalize_course_url, normalize_keywords, text_cleanup
 
 
 def create_fm_ocw_course_url_to_keywords_mapping(path=None, file_name=None):
@@ -86,8 +85,7 @@ def get_cr_keywords(fm_ocw_keywords_mapping, list_of_topics_objs, course_url):
     """
     keywords = fm_ocw_keywords_mapping.get(course_url)
     if keywords:
-        normalized_keywords = re.sub(r"[;,]|\n\n|\n", "|", keywords)
-        return normalized_keywords.replace("| ", "|")
+        return normalize_keywords(keywords)
     return "|".join(topic["name"] for topic in list_of_topics_objs)
 
 
