@@ -6,7 +6,10 @@ class KeywordsCleanupTests(unittest.TestCase):
     """Test suite for verifying the functionality of the description cleanup process."""
 
     def test_formatting_of_keywords(self):
-        """Test that formatting, such as apostrophes, capitalization, and spacing are handled correctly."""
+        """
+        Test that formatting, including apostrophes, capitalization,
+        and spacing, is handled correctly.
+        """
         sample_text = "TCP's and UDPs,U.S.A, chemical industry"
         normalized_keywords = normalize_keywords(sample_text)
         self.assertEqual(normalized_keywords, "TCP's and UDPs|U.S.A|Chemical Industry")
