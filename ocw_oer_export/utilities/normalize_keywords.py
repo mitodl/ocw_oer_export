@@ -3,6 +3,7 @@ Module for normalizing OCW FM export course keywords.
 """
 
 import re
+from titlecase import titlecase
 
 
 def normalize_keywords(keywords):
@@ -22,7 +23,7 @@ def normalize_keywords(keywords):
     """
     normalized_keywords = re.sub(r"[;,]|\n\n|\n", "|", keywords).strip()
     keywords_list = [
-        keyword.title()
+        titlecase(keyword)
         for keyword in (
             normalized_keyword.strip()
             for normalized_keyword in normalized_keywords.split("|")
