@@ -10,9 +10,11 @@ class KeywordsNormalizationTests(unittest.TestCase):
         Test that formatting, including apostrophes, capitalization,
         and spacing, is handled correctly.
         """
-        sample_text = "TCP's and UDPs,U.S.A, chemical industry"
+        sample_text = "TCP's and UDPs,UDP,U.S.A,RNA,DNA, chemical industry"
         normalized_keywords = normalize_keywords(sample_text)
-        self.assertEqual(normalized_keywords, "TCP's and UDPs|U.S.A|Chemical Industry")
+        self.assertEqual(
+            normalized_keywords, "TCP's and UDPs|UDP|U.S.A|RNA|DNA|Chemical Industry"
+        )
 
     def test_single_commas_keywords(self):
         """Test that keywords separated using single commas are normalized correctly."""

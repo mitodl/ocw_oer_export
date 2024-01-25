@@ -23,7 +23,7 @@ def normalize_keywords(keywords):
     """
     normalized_keywords = re.sub(r"[;,]|\n\n|\n", "|", keywords).strip()
     keywords_list = [
-        titlecase(keyword)
+        titlecase(keyword) if not keyword.isupper() else keyword
         for keyword in (
             normalized_keyword.strip()
             for normalized_keyword in normalized_keywords.split("|")
