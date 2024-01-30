@@ -47,23 +47,16 @@ jobs:
           run: |
             git fetch --tags
             LATEST_TAG=$(git tag | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+-csv$' | sort -V | tail -n1)
-            echo "latest tag"
-            echo $LATEST_tag
             # If no tags exist, start with v1.0.0-csv
             if [ -z "$LATEST_TAG" ]
             then
-              echo "latest tag not set"
               LATEST_TAG="v1.0.0-csv"
             fi
-            echo $LATEST_TAG
             BASE_TAG=${LATEST_TAG#v} # Remove the leading 'v'
             BASE_TAG=${BASE_TAG%-csv} # Remove the trailing '-csv'
-            echo "here0"
             IFS='.' read -a TAG_PARTS <<< "$BASE_TAG"
             TAG_PARTS[2]=$((TAG_PARTS[2]+1)) # Increment the patch number
             NEW_TAG="v${TAG_PARTS[0]}.${TAG_PARTS[1]}.${TAG_PARTS[2]}-csv"
-            echo "new tag"
-            echo $NEW_TAG
             echo "TAG_NAME=$NEW_TAG" >> $GITHUB_ENV
 
         - name: Format Release Date for Release Title
