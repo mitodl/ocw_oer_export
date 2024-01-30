@@ -4,7 +4,7 @@ on:
       branches:
       - main
   schedule:
-      - cron: '0 10 * * 1'
+      - cron: '0 10 * * 1' # Every Monday at 10AM
 
 jobs:
   generate_and_release_csv:
