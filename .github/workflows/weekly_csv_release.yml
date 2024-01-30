@@ -62,7 +62,7 @@ jobs:
             echo "here0"
             IFS='.' read -a TAG_PARTS <<< "$BASE_TAG"
             echo "here1"
-            ((TAG_PARTS[2]++)) # Increment the patch number
+            TAG_PARTS[2]=$((TAG_PARTS[2]+1)) # Increment the patch number
             echo "here2"
             NEW_TAG="v${TAG_PARTS[0]}.${TAG_PARTS[1]}.${TAG_PARTS[2]}-csv"
             echo "new tag"
