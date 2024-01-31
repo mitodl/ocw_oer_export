@@ -89,6 +89,18 @@ def get_cr_keywords(fm_ocw_keywords_mapping, list_of_topics_objs, course_url):
     return "|".join(topic["name"] for topic in list_of_topics_objs)
 
 
+def get_cr_create_date(semester, year):
+    """Convert a semester and year into a ballpark start date."""
+    semester_start_dates = {
+        "Fall": "08-01",
+        "Spring": "02-01",
+        "Summer": "06-01",
+        "January IAP": "01-01",
+    }
+    start_date = semester_start_dates.get(semester)
+    return f"{year}-{start_date}"
+
+
 def get_cr_authors(list_of_authors_objs):
     """Get OER formatted Course Resource Authors list."""
     return "|".join(
@@ -159,6 +171,9 @@ def transform_single_course(course, ocw_topics_mapping, fm_ocw_keywords_mapping)
         "CR_KEYWORDS": get_cr_keywords(
             fm_ocw_keywords_mapping, course["topics"], course_runs["url"]
         ),
+        "CR_CREATE_DATE": get_cr_create_date(
+            course_runs["semester"], course_runs["year"]
+        ),
         "CR_AUTHOR_NAME": get_cr_authors(course_runs["instructors"]),
         "CR_PROVIDER": "MIT",
         "CR_PROVIDER_SET": "MIT OpenCourseWare",
@@ -217,6 +232,7 @@ def create_csv(
         "CR_PRIMARY_USER",
         "CR_SUBJECT",
         "CR_KEYWORDS",
+        "CR_CREATE_DATE",
         "CR_AUTHOR_NAME",
         "CR_PROVIDER",
         "CR_PROVIDER_SET",
