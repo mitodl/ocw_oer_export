@@ -1,30 +1,149 @@
 [
     {
-        "id": 4580,
+        "id": 3659,
         "topics": [
             {
-                "id": 100,
-                "name": "Urban Studies"
+                "id": 39,
+                "name": "Philosophy"
+            },
+            {
+                "id": 82,
+                "name": "Political Philosophy"
+            },
+            {
+                "id": 38,
+                "name": "Humanities"
+            }
+        ],
+        "offered_by": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "platform": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "course_feature": [],
+        "departments": [
+            {
+                "department_id": "CC",
+                "name": "Concourse"
+            }
+        ],
+        "certification": false,
+        "prices": [],
+        "runs": [
+            {
+                "id": 2299,
+                "instructors": [
+                    {
+                        "id": 1051,
+                        "first_name": "Linda",
+                        "last_name": "Rabieh",
+                        "full_name": "Dr. Linda Rabieh"
+                    }
+                ],
+                "image": {
+                    "id": 2363,
+                    "url": "https://ocw.mit.edu/courses/cc-111-modern-conceptions-of-freedom-spring-2013/570145f2dc2535544c89aebc302e4fc5_CC-111s13.jpg",
+                    "description": "Alexis de Tocqueville (1805 - 1859) was a French political thinker and historian best known for his Democracy in America, a two-volume study of the American people and their political institutions. This image is in the public domain. Source: Wikimedia Commons.",
+                    "alt": "A slim smartly-dressed young man, with wavy black hair, stands behind an ornate chair."
+                },
+                "level": [
+                    {
+                        "code": "undergraduate",
+                        "name": "Undergraduate"
+                    }
+                ],
+                "run_id": "541fcd9012875320b8f2cfcc2ed978b7",
+                "title": "Modern Conceptions of Freedom",
+                "description": "This course examines the modern definition of freedom, and the obligations that people accept in honoring it. It investigates how these obligations are captured in the principles of our political associations. This course also studies how the centrality of freedom plays out in the political thought of such authors as Hobbes, Locke, Rousseau, Burke and Montesquieu, as well as debating which notions of freedom inspire and sustain the American experiment by careful reading of the documents and arguments of the founding of the United States.\n\nThis course is part of the [Concourse](http://web.mit.edu/concourse/www/) program at MIT.\n",
+                "full_description": null,
+                "last_modified": "2024-02-12T15:36:59Z",
+                "published": true,
+                "languages": null,
+                "url": "https://ocw.mit.edu/courses/cc-111-modern-conceptions-of-freedom-spring-2013",
+                "slug": "courses/cc-111-modern-conceptions-of-freedom-spring-2013",
+                "availability": "Current",
+                "semester": "Spring",
+                "year": 2013,
+                "start_date": null,
+                "end_date": null,
+                "enrollment_start": null,
+                "enrollment_end": null,
+                "prices": null,
+                "checksum": null
+            }
+        ],
+        "image": {
+            "id": 2363,
+            "url": "https://ocw.mit.edu/courses/cc-111-modern-conceptions-of-freedom-spring-2013/570145f2dc2535544c89aebc302e4fc5_CC-111s13.jpg",
+            "description": "Alexis de Tocqueville (1805 - 1859) was a French political thinker and historian best known for his Democracy in America, a two-volume study of the American people and their political institutions. This image is in the public domain. Source: Wikimedia Commons.",
+            "alt": "A slim smartly-dressed young man, with wavy black hair, stands behind an ornate chair."
+        },
+        "learning_path_parents": [],
+        "user_list_parents": [],
+        "resource_type": "course",
+        "course": {
+            "course_numbers": [
+                {
+                    "value": "CC.111",
+                    "department": {
+                        "department_id": "CC",
+                        "name": "Concourse"
+                    },
+                    "listing_type": "primary"
+                }
+            ]
+        },
+        "readable_id": "CC.111+spring_2013",
+        "title": "Modern Conceptions of Freedom",
+        "description": "This course examines the modern definition of freedom, and the obligations that people accept in honoring it. It investigates how these obligations are captured in the principles of our political associations. This course also studies how the centrality of freedom plays out in the political thought of such authors as Hobbes, Locke, Rousseau, Burke and Montesquieu, as well as debating which notions of freedom inspire and sustain the American experiment by careful reading of the documents and arguments of the founding of the United States.\n\nThis course is part of the [Concourse](http://web.mit.edu/concourse/www/) program at MIT.\n",
+        "full_description": null,
+        "last_modified": "2024-02-12T15:36:59Z",
+        "published": true,
+        "languages": null,
+        "url": "https://ocw.mit.edu/courses/cc-111-modern-conceptions-of-freedom-spring-2013",
+        "professional": false
+    },
+    {
+        "id": 3828,
+        "topics": [
+            {
+                "id": 131,
+                "name": "Social Anthropology"
             },
             {
                 "id": 4,
                 "name": "Social Science"
             },
             {
-                "id": 138,
-                "name": "Urban Planning"
+                "id": 38,
+                "name": "Humanities"
             },
             {
-                "id": 172,
-                "name": "Environmental Design"
+                "id": 39,
+                "name": "Philosophy"
             },
             {
-                "id": 44,
-                "name": "Architecture"
+                "id": 70,
+                "name": "American History"
             },
             {
-                "id": 90,
-                "name": "Fine Arts"
+                "id": 43,
+                "name": "History"
+            },
+            {
+                "id": 79,
+                "name": "Cultural Anthropology"
+            },
+            {
+                "id": 80,
+                "name": "Anthropology"
+            },
+            {
+                "id": 82,
+                "name": "Political Philosophy"
             }
         ],
         "offered_by": {
@@ -36,614 +155,48 @@
             "name": "OCW"
         },
         "course_feature": [
-            "Written Assignments",
-            "Design Assignments"
+            "Written Assignments"
         ],
         "departments": [
             {
-                "department_id": "11",
-                "name": "Urban Studies and Planning"
-            },
-            {
-                "department_id": "4",
-                "name": "Architecture"
+                "department_id": "21H",
+                "name": "History"
             }
         ],
         "certification": false,
         "prices": [],
         "runs": [
             {
-                "id": 3220,
+                "id": 2468,
                 "instructors": [
                     {
-                        "id": 1874,
-                        "first_name": "Carol",
-                        "last_name": "Burns",
-                        "full_name": "Prof. Carol Burns"
-                    },
-                    {
-                        "id": 1875,
-                        "first_name": "John",
-                        "last_name": "de Monchaux",
-                        "full_name": "Prof. John de Monchaux"
+                        "id": 1207,
+                        "first_name": "Meg",
+                        "last_name": "Jacobs",
+                        "full_name": "Prof. Meg Jacobs"
                     }
                 ],
                 "image": {
-                    "id": 3280,
-                    "url": "https://ocw.mit.edu/courses/11-332j-urban-design-fall-2003/3d11876b69713b2025b7012502f9c06a_11-332jf03.jpg",
-                    "description": "",
-                    "alt": "Map of Cambridge."
+                    "id": 2532,
+                    "url": "https://ocw.mit.edu/courses/21h-206-american-consumer-culture-fall-2007/cc80e09ea92f62f67790300fe4176345_21h-206f07.jpg",
+                    "description": "Automobiles in window of the Washington-Cadillac Co., Washington, D.C. (Image courtesy of Library of Congress, Prints & Photographs Division , FSA-OWI Collection, [reproduction number LC-USZ62-111329 DLC].)",
+                    "alt": "Black and white photo of a card dealership."
                 },
-                "run_id": "96c17edf01bd9f8195ad8ffcf69471b4",
-                "title": "Urban Design",
-                "description": "For many years, Cambridge, MA, as host to two major research universities, has been the scene of debates as to how best to meet the competing expectations of different stakeholders. Where there has been success, it has frequently been the result, at least in part, of inventive urban design proposals and the design and implementation of new institutional arrangements to accomplish those proposals. Where there has been failure it has often been explained by the inability - or unwillingness - of one stakeholder to accept and accommodate the expectations of another. The two most recent fall Urban Design Studios have examined these issues at a larger scale. In 2001 we looked at the possible patterns for growth and change in Cambridge, UK, as triggered by the plans of Cambridge University. And in 2002 we looked at these same issues along the length of the MIT 'frontier' in Cambridge, MA as they related to the development of MIT and the biotech research industry.\n\nIn the fall 2003 Urban Design Studio we propose to focus in on an area adjacent to Cambridgeport and the western end of the MIT campus, roughly centered on Fort Washington. Our goal is to discover the ways in which good urban form, an apt mix of activities, and effective institutional mechanisms might all be brought together in ways that respect shared expectations and reconcile competing expectations - perhaps in unexpected and adroit ways.\n",
-                "full_description": null,
-                "last_modified": "2024-01-30T19:29:18Z",
-                "published": true,
-                "languages": null,
-                "url": "https://ocw.mit.edu/courses/11-332j-urban-design-fall-2003",
                 "level": [
-                    "Graduate"
-                ],
-                "slug": "courses/11-332j-urban-design-fall-2003",
-                "availability": "Current",
-                "semester": "Fall",
-                "year": 2003,
-                "start_date": null,
-                "end_date": null,
-                "enrollment_start": null,
-                "enrollment_end": null,
-                "prices": null,
-                "checksum": null
-            }
-        ],
-        "image": {
-            "id": 3280,
-            "url": "https://ocw.mit.edu/courses/11-332j-urban-design-fall-2003/3d11876b69713b2025b7012502f9c06a_11-332jf03.jpg",
-            "description": "",
-            "alt": "Map of Cambridge."
-        },
-        "learning_path_parents": [],
-        "user_list_parents": [],
-        "resource_type": "course",
-        "course": {
-            "course_numbers": [
-                {
-                    "value": "11.332J",
-                    "department": {
-                        "department_id": "11",
-                        "name": "Urban Studies and Planning"
-                    },
-                    "listing_type": "primary"
-                },
-                {
-                    "value": "4.163J",
-                    "department": {
-                        "department_id": "4",
-                        "name": "Architecture"
-                    },
-                    "listing_type": "cross-listed"
-                }
-            ]
-        },
-        "readable_id": "11.332J+fall_2003",
-        "title": "Urban Design",
-        "description": "For many years, Cambridge, MA, as host to two major research universities, has been the scene of debates as to how best to meet the competing expectations of different stakeholders. Where there has been success, it has frequently been the result, at least in part, of inventive urban design proposals and the design and implementation of new institutional arrangements to accomplish those proposals. Where there has been failure it has often been explained by the inability - or unwillingness - of one stakeholder to accept and accommodate the expectations of another. The two most recent fall Urban Design Studios have examined these issues at a larger scale. In 2001 we looked at the possible patterns for growth and change in Cambridge, UK, as triggered by the plans of Cambridge University. And in 2002 we looked at these same issues along the length of the MIT 'frontier' in Cambridge, MA as they related to the development of MIT and the biotech research industry.\n\nIn the fall 2003 Urban Design Studio we propose to focus in on an area adjacent to Cambridgeport and the western end of the MIT campus, roughly centered on Fort Washington. Our goal is to discover the ways in which good urban form, an apt mix of activities, and effective institutional mechanisms might all be brought together in ways that respect shared expectations and reconcile competing expectations - perhaps in unexpected and adroit ways.\n",
-        "full_description": null,
-        "last_modified": "2024-01-30T19:29:18Z",
-        "published": true,
-        "languages": null,
-        "url": "https://ocw.mit.edu/courses/11-332j-urban-design-fall-2003",
-        "professional": false
-    },
-    {
-        "id": 5521,
-        "topics": [
-            {
-                "id": 1,
-                "name": "Science"
-            },
-            {
-                "id": 2,
-                "name": "Biology"
-            },
-            {
-                "id": 115,
-                "name": "Cognitive Science"
-            },
-            {
-                "id": 116,
-                "name": "Neuroscience"
-            }
-        ],
-        "offered_by": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "platform": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "course_feature": [
-            "Lecture Notes",
-            "Problem Sets"
-        ],
-        "departments": [
-            {
-                "department_id": "9",
-                "name": "Brain and Cognitive Sciences"
-            },
-            {
-                "department_id": "8",
-                "name": "Physics"
-            }
-        ],
-        "certification": false,
-        "prices": [],
-        "runs": [
-            {
-                "id": 4161,
-                "instructors": [
                     {
-                        "id": 887,
-                        "first_name": "Sebastian",
-                        "last_name": "Seung",
-                        "full_name": "Prof. Sebastian Seung"
+                        "code": "undergraduate",
+                        "name": "Undergraduate"
                     }
                 ],
-                "image": {
-                    "id": 4211,
-                    "url": "https://ocw.mit.edu/courses/9-641j-introduction-to-neural-networks-spring-2005/b5f5694dcec8c3bcf1eb6914dbeadd58_9-641js05.jpg",
-                    "description": "Neurons forming a network in disassociated cell culture. (Image courtesy of Seung Laboratory, MIT Department of Brain and Cognitive Sciences.)",
-                    "alt": "Neurons forming a network in disassociated cell culture. "
-                },
-                "run_id": "02d47ac31aa2e0399778f9dfe997ab4b",
-                "title": "Introduction to Neural Networks",
-                "description": "This course explores the organization of synaptic connectivity as the basis of neural computation and learning. Perceptrons and dynamical theories of recurrent networks including amplifiers, attractors, and hybrid computation are covered. Additional topics include backpropagation and Hebbian learning, as well as models of perception, motor control, memory, and neural development.\n",
+                "run_id": "b7d476b5863b76d1ad89568266247fd1",
+                "title": "American Consumer Culture",
+                "description": "This class examines how and why twentieth-century Americans came to define the \"good life\" through consumption, leisure, and material abundance. We will explore how such things as department stores, nationally advertised brand-name goods, mass-produced cars, and suburbs transformed the American economy, society, and politics. The course is organized both thematically and chronologically. Each period deals with a new development in the history of consumer culture. Throughout we explore both celebrations and critiques of mass consumption and abundance.\n",
                 "full_description": null,
-                "last_modified": "2024-01-30T18:28:53Z",
+                "last_modified": "2024-02-07T22:01:56Z",
                 "published": true,
                 "languages": null,
-                "url": "https://ocw.mit.edu/courses/9-641j-introduction-to-neural-networks-spring-2005",
-                "level": [
-                    "Graduate"
-                ],
-                "slug": "courses/9-641j-introduction-to-neural-networks-spring-2005",
-                "availability": "Current",
-                "semester": "Spring",
-                "year": 2005,
-                "start_date": null,
-                "end_date": null,
-                "enrollment_start": null,
-                "enrollment_end": null,
-                "prices": null,
-                "checksum": null
-            }
-        ],
-        "image": {
-            "id": 4211,
-            "url": "https://ocw.mit.edu/courses/9-641j-introduction-to-neural-networks-spring-2005/b5f5694dcec8c3bcf1eb6914dbeadd58_9-641js05.jpg",
-            "description": "Neurons forming a network in disassociated cell culture. (Image courtesy of Seung Laboratory, MIT Department of Brain and Cognitive Sciences.)",
-            "alt": "Neurons forming a network in disassociated cell culture. "
-        },
-        "learning_path_parents": [],
-        "user_list_parents": [],
-        "resource_type": "course",
-        "course": {
-            "course_numbers": [
-                {
-                    "value": "9.641J",
-                    "department": {
-                        "department_id": "9",
-                        "name": "Brain and Cognitive Sciences"
-                    },
-                    "listing_type": "primary"
-                },
-                {
-                    "value": "8.594J",
-                    "department": {
-                        "department_id": "8",
-                        "name": "Physics"
-                    },
-                    "listing_type": "cross-listed"
-                }
-            ]
-        },
-        "readable_id": "9.641J+spring_2005",
-        "title": "Introduction to Neural Networks",
-        "description": "This course explores the organization of synaptic connectivity as the basis of neural computation and learning. Perceptrons and dynamical theories of recurrent networks including amplifiers, attractors, and hybrid computation are covered. Additional topics include backpropagation and Hebbian learning, as well as models of perception, motor control, memory, and neural development.\n",
-        "full_description": null,
-        "last_modified": "2024-01-30T18:28:53Z",
-        "published": true,
-        "languages": null,
-        "url": "https://ocw.mit.edu/courses/9-641j-introduction-to-neural-networks-spring-2005",
-        "professional": false
-    },
-    {
-        "id": 4681,
-        "topics": [
-            {
-                "id": 32,
-                "name": "Engineering"
-            },
-            {
-                "id": 67,
-                "name": "Dynamics and Control"
-            },
-            {
-                "id": 37,
-                "name": "Mathematics"
-            },
-            {
-                "id": 188,
-                "name": "Computational Modeling and Simulation"
-            },
-            {
-                "id": 21,
-                "name": "Mechanical Engineering"
-            },
-            {
-                "id": 124,
-                "name": "Applied Mathematics"
-            },
-            {
-                "id": 29,
-                "name": "Systems Engineering"
-            }
-        ],
-        "offered_by": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "platform": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "course_feature": [
-            "Problem Sets with Solutions"
-        ],
-        "departments": [
-            {
-                "department_id": "2",
-                "name": "Mechanical Engineering"
-            }
-        ],
-        "certification": false,
-        "prices": [],
-        "runs": [
-            {
-                "id": 3321,
-                "instructors": [
-                    {
-                        "id": 1136,
-                        "first_name": "Triantaphyllos",
-                        "last_name": "Akylas",
-                        "full_name": "Prof. Triantaphyllos Akylas"
-                    },
-                    {
-                        "id": 588,
-                        "first_name": "George",
-                        "last_name": "Haller",
-                        "full_name": "Prof. George Haller"
-                    },
-                    {
-                        "id": 1119,
-                        "first_name": "Peter",
-                        "last_name": "So",
-                        "full_name": "Prof. Peter So"
-                    }
-                ],
-                "image": {
-                    "id": 3381,
-                    "url": "https://ocw.mit.edu/courses/2-004-modeling-dynamics-and-control-ii-spring-2003/66e11d0452bee58b504964715edf92a1_2-004s03.jpg",
-                    "description": "",
-                    "alt": "Conceptual diagram of a car's suspension."
-                },
-                "run_id": "70cbb9ea8364cd35650987cfdc38e97e",
-                "title": "Modeling Dynamics and Control II",
-                "description": "This course is the second subject of a two-term sequence on modeling, analysis and control of dynamic systems. Topics covered include:\n\n*   kinematics and dynamics of mechanical systems, including rigid bodies in plane motion\n*   linear and angular momentum principles\n*   impact and collision problems\n*   linearization about equilibrium\n*   free and forced vibrations\n*   sensors and actuators\n*   control of mechanical systems\n*   integral and derivative action, lead and lag compensators\n*   root-locus design methods\n*   frequency-domain design methods\n*   applications to case-studies of multi-domain systems\n",
-                "full_description": null,
-                "last_modified": "2024-01-30T18:52:21Z",
-                "published": true,
-                "languages": null,
-                "url": "https://ocw.mit.edu/courses/2-004-modeling-dynamics-and-control-ii-spring-2003",
-                "level": [
-                    "Undergraduate"
-                ],
-                "slug": "courses/2-004-modeling-dynamics-and-control-ii-spring-2003",
-                "availability": "Current",
-                "semester": "Spring",
-                "year": 2003,
-                "start_date": null,
-                "end_date": null,
-                "enrollment_start": null,
-                "enrollment_end": null,
-                "prices": null,
-                "checksum": null
-            }
-        ],
-        "image": {
-            "id": 3381,
-            "url": "https://ocw.mit.edu/courses/2-004-modeling-dynamics-and-control-ii-spring-2003/66e11d0452bee58b504964715edf92a1_2-004s03.jpg",
-            "description": "",
-            "alt": "Conceptual diagram of a car's suspension."
-        },
-        "learning_path_parents": [],
-        "user_list_parents": [],
-        "resource_type": "course",
-        "course": {
-            "course_numbers": [
-                {
-                    "value": "2.004",
-                    "department": {
-                        "department_id": "2",
-                        "name": "Mechanical Engineering"
-                    },
-                    "listing_type": "primary"
-                }
-            ]
-        },
-        "readable_id": "2.004+spring_2003",
-        "title": "Modeling Dynamics and Control II",
-        "description": "This course is the second subject of a two-term sequence on modeling, analysis and control of dynamic systems. Topics covered include:\n\n*   kinematics and dynamics of mechanical systems, including rigid bodies in plane motion\n*   linear and angular momentum principles\n*   impact and collision problems\n*   linearization about equilibrium\n*   free and forced vibrations\n*   sensors and actuators\n*   control of mechanical systems\n*   integral and derivative action, lead and lag compensators\n*   root-locus design methods\n*   frequency-domain design methods\n*   applications to case-studies of multi-domain systems\n",
-        "full_description": null,
-        "last_modified": "2024-01-30T18:52:21Z",
-        "published": true,
-        "languages": null,
-        "url": "https://ocw.mit.edu/courses/2-004-modeling-dynamics-and-control-ii-spring-2003",
-        "professional": false
-    },
-    {
-        "id": 5282,
-        "topics": [
-            {
-                "id": 32,
-                "name": "Engineering"
-            },
-            {
-                "id": 37,
-                "name": "Mathematics"
-            },
-            {
-                "id": 5,
-                "name": "Computer Science"
-            },
-            {
-                "id": 7,
-                "name": "Business"
-            },
-            {
-                "id": 105,
-                "name": "Systems Optimization"
-            },
-            {
-                "id": 106,
-                "name": "Project Management"
-            },
-            {
-                "id": 148,
-                "name": "Algorithms and Data Structures"
-            },
-            {
-                "id": 149,
-                "name": "Computer Networks"
-            },
-            {
-                "id": 22,
-                "name": "Information Technology"
-            },
-            {
-                "id": 124,
-                "name": "Applied Mathematics"
-            },
-            {
-                "id": 29,
-                "name": "Systems Engineering"
-            }
-        ],
-        "offered_by": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "platform": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "course_feature": [
-            "Problem Sets",
-            "Projects",
-            "Lecture Notes"
-        ],
-        "departments": [
-            {
-                "department_id": "ESD",
-                "name": "Engineering Systems Division"
-            },
-            {
-                "department_id": "15",
-                "name": "Sloan School of Management"
-            },
-            {
-                "department_id": "6",
-                "name": "Electrical Engineering and Computer Science"
-            }
-        ],
-        "certification": false,
-        "prices": [],
-        "runs": [
-            {
-                "id": 3922,
-                "instructors": [
-                    {
-                        "id": 1140,
-                        "first_name": "James",
-                        "last_name": "Orlin",
-                        "full_name": "Prof. James Orlin"
-                    }
-                ],
-                "image": {
-                    "id": 3977,
-                    "url": "https://ocw.mit.edu/courses/15-082j-network-optimization-fall-2010/46e0640fbe139dc81923049424ef58a5_15-082jf10.jpg",
-                    "description": "Network representation of the transshipment problem. ",
-                    "alt": "Network representation of a transshipment problem."
-                },
-                "run_id": "e5824d9fcbd75afc45c783e5307267bd",
-                "title": "Network Optimization",
-                "description": "15.082J/6.855J/ESD.78J is a graduate subject in the theory and practice of network flows and its extensions. Network flow problems form a subclass of linear programming problems with applications to transportation, logistics, manufacturing, computer science, project management, and finance, as well as a number of other domains. This subject will survey some of the applications of network flows and focus on key special cases of network flow problems including the following: the shortest path problem, the maximum flow problem, the minimum cost flow problem, and the multi-commodity flow problem. We will also consider other extensions of network flow problems.\n",
-                "full_description": null,
-                "last_modified": "2024-01-30T17:57:24Z",
-                "published": true,
-                "languages": null,
-                "url": "https://ocw.mit.edu/courses/15-082j-network-optimization-fall-2010",
-                "level": [
-                    "Graduate"
-                ],
-                "slug": "courses/15-082j-network-optimization-fall-2010",
-                "availability": "Current",
-                "semester": "Fall",
-                "year": 2010,
-                "start_date": null,
-                "end_date": null,
-                "enrollment_start": null,
-                "enrollment_end": null,
-                "prices": null,
-                "checksum": null
-            }
-        ],
-        "image": {
-            "id": 3977,
-            "url": "https://ocw.mit.edu/courses/15-082j-network-optimization-fall-2010/46e0640fbe139dc81923049424ef58a5_15-082jf10.jpg",
-            "description": "Network representation of the transshipment problem. ",
-            "alt": "Network representation of a transshipment problem."
-        },
-        "learning_path_parents": [],
-        "user_list_parents": [],
-        "resource_type": "course",
-        "course": {
-            "course_numbers": [
-                {
-                    "value": "15.082J",
-                    "department": {
-                        "department_id": "15",
-                        "name": "Sloan School of Management"
-                    },
-                    "listing_type": "primary"
-                },
-                {
-                    "value": "6.855J",
-                    "department": {
-                        "department_id": "6",
-                        "name": "Electrical Engineering and Computer Science"
-                    },
-                    "listing_type": "cross-listed"
-                },
-                {
-                    "value": "ESD.78J",
-                    "department": {
-                        "department_id": "ESD",
-                        "name": "Engineering Systems Division"
-                    },
-                    "listing_type": "cross-listed"
-                }
-            ]
-        },
-        "readable_id": "15.082J+fall_2010",
-        "title": "Network Optimization",
-        "description": "15.082J/6.855J/ESD.78J is a graduate subject in the theory and practice of network flows and its extensions. Network flow problems form a subclass of linear programming problems with applications to transportation, logistics, manufacturing, computer science, project management, and finance, as well as a number of other domains. This subject will survey some of the applications of network flows and focus on key special cases of network flow problems including the following: the shortest path problem, the maximum flow problem, the minimum cost flow problem, and the multi-commodity flow problem. We will also consider other extensions of network flow problems.\n",
-        "full_description": null,
-        "last_modified": "2024-01-30T17:57:24Z",
-        "published": true,
-        "languages": null,
-        "url": "https://ocw.mit.edu/courses/15-082j-network-optimization-fall-2010",
-        "professional": false
-    },
-    {
-        "id": 4281,
-        "topics": [
-            {
-                "id": 32,
-                "name": "Engineering"
-            },
-            {
-                "id": 1,
-                "name": "Science"
-            },
-            {
-                "id": 68,
-                "name": "Quantum Mechanics"
-            },
-            {
-                "id": 107,
-                "name": "Electromagnetism"
-            },
-            {
-                "id": 140,
-                "name": "Materials Science and Engineering"
-            },
-            {
-                "id": 173,
-                "name": "Atomic, Molecular, Optical Physics"
-            },
-            {
-                "id": 30,
-                "name": "Physics"
-            }
-        ],
-        "offered_by": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "platform": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "course_feature": [
-            "Lecture Notes",
-            "Problem Sets with Solutions"
-        ],
-        "departments": [
-            {
-                "department_id": "3",
-                "name": "Materials Science and Engineering"
-            }
-        ],
-        "certification": false,
-        "prices": [],
-        "runs": [
-            {
-                "id": 2921,
-                "instructors": [
-                    {
-                        "id": 1093,
-                        "first_name": "Nicola",
-                        "last_name": "Marzari",
-                        "full_name": "Prof. Nicola Marzari"
-                    },
-                    {
-                        "id": 1639,
-                        "first_name": "David",
-                        "last_name": "Paul",
-                        "full_name": "Prof. David Paul"
-                    }
-                ],
-                "image": {
-                    "id": 2983,
-                    "url": "https://ocw.mit.edu/courses/3-23-electrical-optical-and-magnetic-properties-of-materials-fall-2007/00779c041c9b04377c3351a4090676bc_3-23f07.jpg",
-                    "description": "Quantum modelling of the superprotonic phase of cesium bisulfate, CsHSO4. (Image courtesy of Brandon Wood and Nicola Marzari.)",
-                    "alt": "The lattice of cesium bisulfate is shown."
-                },
-                "run_id": "a4d004591b9f393781f5d91afbca3f03",
-                "title": "Electrical, Optical, and Magnetic Properties of Materials",
-                "description": "This class discusses the origin of electrical, magnetic and optical properties of materials, with a focus on the acquisition of quantum mechanical tools. It begins with an analysis of the properties of materials, presentation of the postulates of quantum mechanics, and close examination of the hydrogen atom, simple molecules and bonds, and the behavior of electrons in solids and energy bands. Introducing the variation principle as a method for the calculation of wavefunctions, the course continues with investigation of how and why materials respond to different electrical, magnetic and electromagnetic fields and probes and study of the conductivity, dielectric function, and magnetic permeability in metals, semiconductors, and insulators. A survey of common devices such as transistors, magnetic storage media, optical fibers concludes the semester.\n\nNote: The Magnetics unit was taught by co-instructor David Paul; that material is not available at this time.\n",
-                "full_description": null,
-                "last_modified": "2024-01-30T18:04:39Z",
-                "published": true,
-                "languages": null,
-                "url": "https://ocw.mit.edu/courses/3-23-electrical-optical-and-magnetic-properties-of-materials-fall-2007",
-                "level": [
-                    "Graduate"
-                ],
-                "slug": "courses/3-23-electrical-optical-and-magnetic-properties-of-materials-fall-2007",
+                "url": "https://ocw.mit.edu/courses/21h-206-american-consumer-culture-fall-2007",
+                "slug": "courses/21h-206-american-consumer-culture-fall-2007",
                 "availability": "Current",
                 "semester": "Fall",
                 "year": 2007,
@@ -656,10 +209,10 @@
             }
         ],
         "image": {
-            "id": 2983,
-            "url": "https://ocw.mit.edu/courses/3-23-electrical-optical-and-magnetic-properties-of-materials-fall-2007/00779c041c9b04377c3351a4090676bc_3-23f07.jpg",
-            "description": "Quantum modelling of the superprotonic phase of cesium bisulfate, CsHSO4. (Image courtesy of Brandon Wood and Nicola Marzari.)",
-            "alt": "The lattice of cesium bisulfate is shown."
+            "id": 2532,
+            "url": "https://ocw.mit.edu/courses/21h-206-american-consumer-culture-fall-2007/cc80e09ea92f62f67790300fe4176345_21h-206f07.jpg",
+            "description": "Automobiles in window of the Washington-Cadillac Co., Washington, D.C. (Image courtesy of Library of Congress, Prints & Photographs Division , FSA-OWI Collection, [reproduction number LC-USZ62-111329 DLC].)",
+            "alt": "Black and white photo of a card dealership."
         },
         "learning_path_parents": [],
         "user_list_parents": [],
@@ -667,43 +220,51 @@
         "course": {
             "course_numbers": [
                 {
-                    "value": "3.23",
+                    "value": "21H.206",
                     "department": {
-                        "department_id": "3",
-                        "name": "Materials Science and Engineering"
+                        "department_id": "21H",
+                        "name": "History"
                     },
                     "listing_type": "primary"
                 }
             ]
         },
-        "readable_id": "3.23+fall_2007",
-        "title": "Electrical, Optical, and Magnetic Properties of Materials",
-        "description": "This class discusses the origin of electrical, magnetic and optical properties of materials, with a focus on the acquisition of quantum mechanical tools. It begins with an analysis of the properties of materials, presentation of the postulates of quantum mechanics, and close examination of the hydrogen atom, simple molecules and bonds, and the behavior of electrons in solids and energy bands. Introducing the variation principle as a method for the calculation of wavefunctions, the course continues with investigation of how and why materials respond to different electrical, magnetic and electromagnetic fields and probes and study of the conductivity, dielectric function, and magnetic permeability in metals, semiconductors, and insulators. A survey of common devices such as transistors, magnetic storage media, optical fibers concludes the semester.\n\nNote: The Magnetics unit was taught by co-instructor David Paul; that material is not available at this time.\n",
+        "readable_id": "21H.206+fall_2007",
+        "title": "American Consumer Culture",
+        "description": "This class examines how and why twentieth-century Americans came to define the \"good life\" through consumption, leisure, and material abundance. We will explore how such things as department stores, nationally advertised brand-name goods, mass-produced cars, and suburbs transformed the American economy, society, and politics. The course is organized both thematically and chronologically. Each period deals with a new development in the history of consumer culture. Throughout we explore both celebrations and critiques of mass consumption and abundance.\n",
         "full_description": null,
-        "last_modified": "2024-01-30T18:04:39Z",
+        "last_modified": "2024-02-07T22:01:56Z",
         "published": true,
         "languages": null,
-        "url": "https://ocw.mit.edu/courses/3-23-electrical-optical-and-magnetic-properties-of-materials-fall-2007",
+        "url": "https://ocw.mit.edu/courses/21h-206-american-consumer-culture-fall-2007",
         "professional": false
     },
     {
-        "id": 5195,
+        "id": 5036,
         "topics": [
             {
-                "id": 89,
-                "name": "Architectural History and Criticism"
+                "id": 32,
+                "name": "Engineering"
             },
             {
-                "id": 234,
-                "name": "Architectural Design"
+                "id": 3,
+                "name": "Teaching and Education"
             },
             {
-                "id": 44,
-                "name": "Architecture"
+                "id": 119,
+                "name": "Education Policy"
             },
             {
-                "id": 90,
-                "name": "Fine Arts"
+                "id": 216,
+                "name": "Curriculum and Teaching"
+            },
+            {
+                "id": 217,
+                "name": "Higher Education"
+            },
+            {
+                "id": 120,
+                "name": "Educational Technology"
             }
         ],
         "offered_by": {
@@ -715,48 +276,78 @@
             "name": "OCW"
         },
         "course_feature": [
-            "Presentation Assignments with Examples"
+            "Activity Assignments",
+            "Instructor Insights",
+            "Lecture Videos",
+            "Written Assignments"
         ],
         "departments": [
             {
-                "department_id": "4",
-                "name": "Architecture"
+                "department_id": "18",
+                "name": "Mathematics"
+            },
+            {
+                "department_id": "7",
+                "name": "Biology"
+            },
+            {
+                "department_id": "5",
+                "name": "Chemistry"
+            },
+            {
+                "department_id": "8",
+                "name": "Physics"
+            },
+            {
+                "department_id": "1",
+                "name": "Civil and Environmental Engineering"
+            },
+            {
+                "department_id": "6",
+                "name": "Electrical Engineering and Computer Science"
+            },
+            {
+                "department_id": "2",
+                "name": "Mechanical Engineering"
             }
         ],
         "certification": false,
         "prices": [],
         "runs": [
             {
-                "id": 3835,
+                "id": 3676,
                 "instructors": [
                     {
-                        "id": 2278,
-                        "first_name": "Ana",
-                        "last_name": "Miljački",
-                        "full_name": "Prof. Ana Miljački"
+                        "id": 2194,
+                        "first_name": "Janet",
+                        "last_name": "Rankin",
+                        "full_name": "Dr. Janet Rankin"
                     }
                 ],
                 "image": {
-                    "id": 3891,
-                    "url": "https://ocw.mit.edu/courses/4-210-precedents-in-critical-practice-fall-2012/c6252e5579554f515dd700da6b94241a_4-210f12.jpg",
-                    "description": "The famous S, M, L, XL, a monograph that showcases the Office for Metropolitan Architecture's and Rem Koolhaas's work, among other architectural publications. Photo courtesy of Conrad Bakker on Flickr.",
-                    "alt": "Stacks of books on a table, with the silver-covered books with blue lettering as the focal point."
+                    "id": 3732,
+                    "url": "https://ocw.mit.edu/courses/5-95j-teaching-college-level-science-and-engineering-fall-2015/680c27ffaa1346598119362072b1d5df_5-95jf15.jpg",
+                    "description": "Students answer a concept question using non-digital student response devices called plickers (short for paper clickers). Image by MIT OpenCourseWare.",
+                    "alt": "Students holding up cards with images on them that can be scanned as voting devices."
                 },
-                "run_id": "c2b08818536b33dd07e1513b3958c9e0",
-                "title": "Precedents in Critical Practice",
-                "description": "This course provides students with the opportunity to develop a map of contemporary architectural practice and discourse. The seminar examines six themes in terms of their recent history: city and global economy, urban plan and map of operations, program and performance, drawing and scripting, image and surface, and utopia and projection. Students will study buildings and read relevant texts in order to place recent architectural projects in disciplinary and cultural context.\n",
+                "level": [
+                    {
+                        "code": "graduate",
+                        "name": "Graduate"
+                    }
+                ],
+                "run_id": "8567c6d26924e53ae9278a51c9468ff7",
+                "title": "Teaching College-Level Science and Engineering",
+                "description": "This participatory seminar focuses on the knowledge and skills necessary for teaching science and engineering in higher education. It is designed for graduate students interested in an academic career, and anyone else interested in teaching. Students research and present a relevant topic of particular interest. The subject is appropriate for both novices and those with teaching experience.\n",
                 "full_description": null,
-                "last_modified": "2024-01-30T18:04:24Z",
+                "last_modified": "2024-02-12T16:12:02Z",
                 "published": true,
                 "languages": null,
-                "url": "https://ocw.mit.edu/courses/4-210-precedents-in-critical-practice-fall-2012",
-                "level": [
-                    "Graduate"
-                ],
-                "slug": "courses/4-210-precedents-in-critical-practice-fall-2012",
+                "url": "https://ocw.mit.edu/courses/5-95j-teaching-college-level-science-and-engineering-fall-2015",
+                "slug": "courses/5-95j-teaching-college-level-science-and-engineering-fall-2015",
                 "availability": "Current",
                 "semester": "Fall",
-                "year": 2012,
+                "year": 2015,
                 "start_date": null,
                 "end_date": null,
                 "enrollment_start": null,
@@ -766,10 +357,10 @@
             }
         ],
         "image": {
-            "id": 3891,
-            "url": "https://ocw.mit.edu/courses/4-210-precedents-in-critical-practice-fall-2012/c6252e5579554f515dd700da6b94241a_4-210f12.jpg",
-            "description": "The famous S, M, L, XL, a monograph that showcases the Office for Metropolitan Architecture's and Rem Koolhaas's work, among other architectural publications. Photo courtesy of Conrad Bakker on Flickr.",
-            "alt": "Stacks of books on a table, with the silver-covered books with blue lettering as the focal point."
+            "id": 3732,
+            "url": "https://ocw.mit.edu/courses/5-95j-teaching-college-level-science-and-engineering-fall-2015/680c27ffaa1346598119362072b1d5df_5-95jf15.jpg",
+            "description": "Students answer a concept question using non-digital student response devices called plickers (short for paper clickers). Image by MIT OpenCourseWare.",
+            "alt": "Students holding up cards with images on them that can be scanned as voting devices."
         },
         "learning_path_parents": [],
         "user_list_parents": [],
@@ -777,39 +368,498 @@
         "course": {
             "course_numbers": [
                 {
-                    "value": "4.210",
+                    "value": "5.95J",
                     "department": {
-                        "department_id": "4",
-                        "name": "Architecture"
+                        "department_id": "5",
+                        "name": "Chemistry"
+                    },
+                    "listing_type": "primary"
+                },
+                {
+                    "value": "6.982J",
+                    "department": {
+                        "department_id": "6",
+                        "name": "Electrical Engineering and Computer Science"
+                    },
+                    "listing_type": "cross-listed"
+                },
+                {
+                    "value": "7.59J",
+                    "department": {
+                        "department_id": "7",
+                        "name": "Biology"
+                    },
+                    "listing_type": "cross-listed"
+                },
+                {
+                    "value": "8.395J",
+                    "department": {
+                        "department_id": "8",
+                        "name": "Physics"
+                    },
+                    "listing_type": "cross-listed"
+                },
+                {
+                    "value": "18.094J",
+                    "department": {
+                        "department_id": "18",
+                        "name": "Mathematics"
+                    },
+                    "listing_type": "cross-listed"
+                },
+                {
+                    "value": "1.95J",
+                    "department": {
+                        "department_id": "1",
+                        "name": "Civil and Environmental Engineering"
+                    },
+                    "listing_type": "cross-listed"
+                },
+                {
+                    "value": "2.978J",
+                    "department": {
+                        "department_id": "2",
+                        "name": "Mechanical Engineering"
+                    },
+                    "listing_type": "cross-listed"
+                }
+            ]
+        },
+        "readable_id": "5.95J+fall_2015",
+        "title": "Teaching College-Level Science and Engineering",
+        "description": "This participatory seminar focuses on the knowledge and skills necessary for teaching science and engineering in higher education. It is designed for graduate students interested in an academic career, and anyone else interested in teaching. Students research and present a relevant topic of particular interest. The subject is appropriate for both novices and those with teaching experience.\n",
+        "full_description": null,
+        "last_modified": "2024-02-12T16:12:02Z",
+        "published": true,
+        "languages": null,
+        "url": "https://ocw.mit.edu/courses/5-95j-teaching-college-level-science-and-engineering-fall-2015",
+        "professional": false
+    },
+    {
+        "id": 3336,
+        "topics": [
+            {
+                "id": 128,
+                "name": "Biochemistry"
+            },
+            {
+                "id": 1,
+                "name": "Science"
+            },
+            {
+                "id": 2,
+                "name": "Biology"
+            }
+        ],
+        "offered_by": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "platform": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "course_feature": [
+            "Lecture Notes",
+            "Image Gallery"
+        ],
+        "departments": [
+            {
+                "department_id": "5",
+                "name": "Chemistry"
+            }
+        ],
+        "certification": false,
+        "prices": [],
+        "runs": [
+            {
+                "id": 1976,
+                "instructors": [
+                    {
+                        "id": 623,
+                        "first_name": "Elizabeth",
+                        "last_name": "Taylor",
+                        "full_name": "Dr. Elizabeth Vogel Taylor"
+                    }
+                ],
+                "image": {
+                    "id": 2040,
+                    "url": "https://ocw.mit.edu/courses/5-36-biochemistry-laboratory-spring-2009/ac1586bc3d2b67f4782780f48ccca8f2_5-36S09.jpg",
+                    "description": "Gleevec bound to the Abl kinase domain. (PDB ID: 1IEP. Nagar, B., W. Bornmann, P. Pellicena, T. Schindler, D. R. Veach, W. T. Miller, B. Clarkson, J. Kuriyan. \"Crystal Structures of the Kinase Domain of c-Abl in Complex with the Small Molecule Inhibitors PD173955 and Imatinib.\" Cancer Research. 62 (2002): 4236-4243. Image by Elizabeth Vogel Taylor.)",
+                    "alt": "Gleevec molecule inside purple ribbons of enzyme."
+                },
+                "level": [
+                    {
+                        "code": "undergraduate",
+                        "name": "Undergraduate"
+                    }
+                ],
+                "run_id": "6b37f3cc1d1a0b5ece034b3306be57bc",
+                "title": "Biochemistry Laboratory",
+                "description": "The course, which spans two thirds of a semester, provides students with a research-inspired laboratory experience that introduces standard biochemical techniques in the context of investigating a current and exciting research topic, acquired resistance to the cancer drug Gleevec. Techniques include protein expression, purification, and gel analysis, PCR, site-directed mutagenesis, kinase activity assays, and protein structure viewing.\n\nThis class is part of the new laboratory curriculum in the MIT Department of Chemistry. Undergraduate Research-Inspired Experimental Chemistry Alternatives ([URIECA](http://web.mit.edu/chemistry/www/academic/urieca.html)) introduces students to cutting edge research topics in a modular format.\n\n##### Acknowledgments\n\nDevelopment of this course was funded through an HHMI Professors grant to Professor Catherine L. Drennan.\n",
+                "full_description": null,
+                "last_modified": "2024-02-12T19:30:23Z",
+                "published": true,
+                "languages": null,
+                "url": "https://ocw.mit.edu/courses/5-36-biochemistry-laboratory-spring-2009",
+                "slug": "courses/5-36-biochemistry-laboratory-spring-2009",
+                "availability": "Current",
+                "semester": "Spring",
+                "year": 2009,
+                "start_date": null,
+                "end_date": null,
+                "enrollment_start": null,
+                "enrollment_end": null,
+                "prices": null,
+                "checksum": null
+            }
+        ],
+        "image": {
+            "id": 2040,
+            "url": "https://ocw.mit.edu/courses/5-36-biochemistry-laboratory-spring-2009/ac1586bc3d2b67f4782780f48ccca8f2_5-36S09.jpg",
+            "description": "Gleevec bound to the Abl kinase domain. (PDB ID: 1IEP. Nagar, B., W. Bornmann, P. Pellicena, T. Schindler, D. R. Veach, W. T. Miller, B. Clarkson, J. Kuriyan. \"Crystal Structures of the Kinase Domain of c-Abl in Complex with the Small Molecule Inhibitors PD173955 and Imatinib.\" Cancer Research. 62 (2002): 4236-4243. Image by Elizabeth Vogel Taylor.)",
+            "alt": "Gleevec molecule inside purple ribbons of enzyme."
+        },
+        "learning_path_parents": [],
+        "user_list_parents": [],
+        "resource_type": "course",
+        "course": {
+            "course_numbers": [
+                {
+                    "value": "5.36",
+                    "department": {
+                        "department_id": "5",
+                        "name": "Chemistry"
                     },
                     "listing_type": "primary"
                 }
             ]
         },
-        "readable_id": "4.210+fall_2012",
-        "title": "Precedents in Critical Practice",
-        "description": "This course provides students with the opportunity to develop a map of contemporary architectural practice and discourse. The seminar examines six themes in terms of their recent history: city and global economy, urban plan and map of operations, program and performance, drawing and scripting, image and surface, and utopia and projection. Students will study buildings and read relevant texts in order to place recent architectural projects in disciplinary and cultural context.\n",
+        "readable_id": "5.36+spring_2009",
+        "title": "Biochemistry Laboratory",
+        "description": "The course, which spans two thirds of a semester, provides students with a research-inspired laboratory experience that introduces standard biochemical techniques in the context of investigating a current and exciting research topic, acquired resistance to the cancer drug Gleevec. Techniques include protein expression, purification, and gel analysis, PCR, site-directed mutagenesis, kinase activity assays, and protein structure viewing.\n\nThis class is part of the new laboratory curriculum in the MIT Department of Chemistry. Undergraduate Research-Inspired Experimental Chemistry Alternatives ([URIECA](http://web.mit.edu/chemistry/www/academic/urieca.html)) introduces students to cutting edge research topics in a modular format.\n\n##### Acknowledgments\n\nDevelopment of this course was funded through an HHMI Professors grant to Professor Catherine L. Drennan.\n",
         "full_description": null,
-        "last_modified": "2024-01-30T18:04:24Z",
+        "last_modified": "2024-02-12T19:30:23Z",
         "published": true,
         "languages": null,
-        "url": "https://ocw.mit.edu/courses/4-210-precedents-in-critical-practice-fall-2012",
+        "url": "https://ocw.mit.edu/courses/5-36-biochemistry-laboratory-spring-2009",
         "professional": false
     },
     {
-        "id": 5576,
+        "id": 3737,
         "topics": [
             {
-                "id": 38,
-                "name": "Humanities"
+                "id": 32,
+                "name": "Engineering"
             },
             {
-                "id": 102,
-                "name": "Criticism"
+                "id": 1,
+                "name": "Science"
             },
+            {
+                "id": 2,
+                "name": "Biology"
+            },
+            {
+                "id": 168,
+                "name": "Computation and Systems Biology"
+            },
+            {
+                "id": 300,
+                "name": "Ecology"
+            },
+            {
+                "id": 278,
+                "name": "Microbiology"
+            },
+            {
+                "id": 215,
+                "name": "Cell Biology"
+            },
+            {
+                "id": 25,
+                "name": "Biological Engineering"
+            }
+        ],
+        "offered_by": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "platform": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "course_feature": [
+            "Lecture Notes",
+            "Problem Sets with Solutions",
+            "Exams"
+        ],
+        "departments": [
+            {
+                "department_id": "1",
+                "name": "Civil and Environmental Engineering"
+            },
+            {
+                "department_id": "20",
+                "name": "Biological Engineering"
+            }
+        ],
+        "certification": false,
+        "prices": [],
+        "runs": [
+            {
+                "id": 2377,
+                "instructors": [
+                    {
+                        "id": 1116,
+                        "first_name": "Edward",
+                        "last_name": "DeLong",
+                        "full_name": "Prof. Edward DeLong"
+                    },
+                    {
+                        "id": 1115,
+                        "first_name": "David",
+                        "last_name": "Schauer",
+                        "full_name": "Prof. David Schauer"
+                    }
+                ],
+                "image": {
+                    "id": 2441,
+                    "url": "https://ocw.mit.edu/courses/20-106j-systems-microbiology-fall-2006/143e8064abe7d168bd7917b66bc5a4a1_20-106jf06.jpg",
+                    "description": "This natural rotary motor propels the flagella of E. coli cells, allowing them to move forward. (Figure by MIT OCW.)",
+                    "alt": "Diagram of the flagellar rotary motor that propels E. coli. "
+                },
+                "level": [
+                    {
+                        "code": "undergraduate",
+                        "name": "Undergraduate"
+                    }
+                ],
+                "run_id": "8b9e07126b5b42fb576fa6d2bda83050",
+                "title": "Systems Microbiology",
+                "description": "This course covers introductory microbiology from a systems perspective, considering microbial diversity, population dynamics, and genomics. Emphasis is placed on the delicate balance between microbes and humans, and the changes that result in the emergence of infectious diseases and antimicrobial resistance. The case study approach covers such topics as vaccines, toxins, biodefense, and infections including Legionnaire’s disease, tuberculosis, Helicobacter pylori, and plague.\n",
+                "full_description": null,
+                "last_modified": "2024-02-12T19:56:50Z",
+                "published": true,
+                "languages": null,
+                "url": "https://ocw.mit.edu/courses/20-106j-systems-microbiology-fall-2006",
+                "slug": "courses/20-106j-systems-microbiology-fall-2006",
+                "availability": "Current",
+                "semester": "Fall",
+                "year": 2006,
+                "start_date": null,
+                "end_date": null,
+                "enrollment_start": null,
+                "enrollment_end": null,
+                "prices": null,
+                "checksum": null
+            }
+        ],
+        "image": {
+            "id": 2441,
+            "url": "https://ocw.mit.edu/courses/20-106j-systems-microbiology-fall-2006/143e8064abe7d168bd7917b66bc5a4a1_20-106jf06.jpg",
+            "description": "This natural rotary motor propels the flagella of E. coli cells, allowing them to move forward. (Figure by MIT OCW.)",
+            "alt": "Diagram of the flagellar rotary motor that propels E. coli. "
+        },
+        "learning_path_parents": [],
+        "user_list_parents": [],
+        "resource_type": "course",
+        "course": {
+            "course_numbers": [
+                {
+                    "value": "20.106J",
+                    "department": {
+                        "department_id": "20",
+                        "name": "Biological Engineering"
+                    },
+                    "listing_type": "primary"
+                },
+                {
+                    "value": "1.084J",
+                    "department": {
+                        "department_id": "1",
+                        "name": "Civil and Environmental Engineering"
+                    },
+                    "listing_type": "cross-listed"
+                }
+            ]
+        },
+        "readable_id": "20.106J+fall_2006",
+        "title": "Systems Microbiology",
+        "description": "This course covers introductory microbiology from a systems perspective, considering microbial diversity, population dynamics, and genomics. Emphasis is placed on the delicate balance between microbes and humans, and the changes that result in the emergence of infectious diseases and antimicrobial resistance. The case study approach covers such topics as vaccines, toxins, biodefense, and infections including Legionnaire’s disease, tuberculosis, Helicobacter pylori, and plague.\n",
+        "full_description": null,
+        "last_modified": "2024-02-12T19:56:50Z",
+        "published": true,
+        "languages": null,
+        "url": "https://ocw.mit.edu/courses/20-106j-systems-microbiology-fall-2006",
+        "professional": false
+    },
+    {
+        "id": 4082,
+        "topics": [
+            {
+                "id": 32,
+                "name": "Engineering"
+            },
+            {
+                "id": 1,
+                "name": "Science"
+            },
+            {
+                "id": 257,
+                "name": "Biomaterials"
+            },
+            {
+                "id": 2,
+                "name": "Biology"
+            },
+            {
+                "id": 128,
+                "name": "Biochemistry"
+            },
+            {
+                "id": 192,
+                "name": "Organic Chemistry"
+            },
+            {
+                "id": 41,
+                "name": "Chemistry"
+            },
+            {
+                "id": 74,
+                "name": "Chemical Engineering"
+            },
+            {
+                "id": 12,
+                "name": "Health and Medicine"
+            },
+            {
+                "id": 109,
+                "name": "Molecular Engineering"
+            },
+            {
+                "id": 214,
+                "name": "Molecular Biology"
+            },
+            {
+                "id": 25,
+                "name": "Biological Engineering"
+            },
+            {
+                "id": 318,
+                "name": "Cellular and Molecular Medicine"
+            }
+        ],
+        "offered_by": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "platform": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "course_feature": [
+            "Written Assignments",
+            "Presentation Assignments"
+        ],
+        "departments": [
+            {
+                "department_id": "7",
+                "name": "Biology"
+            }
+        ],
+        "certification": false,
+        "prices": [],
+        "runs": [
+            {
+                "id": 2722,
+                "instructors": [
+                    {
+                        "id": 1441,
+                        "first_name": "Kenton",
+                        "last_name": "Hetrick",
+                        "full_name": "Dr. Kenton Hetrick"
+                    },
+                    {
+                        "id": 1440,
+                        "first_name": "Emily",
+                        "last_name": "Ulrich",
+                        "full_name": "Dr. Emily C Ulrich"
+                    }
+                ],
+                "image": {
+                    "id": 2785,
+                    "url": "https://ocw.mit.edu/courses/7-343-microbial-megaproducers-discovery-biosynthesis-engineering-and-applications-of-natural-products-fall-2020/520abf31ec7fb3ce3d29e7960207d7a4_7-343f20.jpg",
+                    "description": "A pie chart showing the classes of terpenes and their applications.",
+                    "alt": "A pie chart showing six different groups of terpene compounds, their chemical structures, their different uses, and the plants from which they are derived."
+                },
+                "level": [
+                    {
+                        "code": "undergraduate",
+                        "name": "Undergraduate"
+                    }
+                ],
+                "run_id": "4715d7313e903847c5b60d02e6de906c",
+                "title": "Microbial Megaproducers: Discovery, Biosynthesis, Engineering and Applications of Natural Products",
+                "description": "The natural world is a mega-factory of small molecules, peptides, fatty acids, phospholipids, and a host of other compounds, known as natural products (NPs). Immensely diverse in structure and function, NPs have strongly influenced how we treat infectious disease, cancer, pain, and a host of other conditions. Roughly half of the drugs that have been approved in the past 30 years are NPs, derivatives of NPs or NP-inspired. In this discussion-based course, we will delve into research on discovering NPs from producing organisms, investigating the biochemistry of NP production, and using synthetic biology to create NP derivatives—all with a particular emphasis on how genomic data guides and informs all these studies.\n\nThis course is one of many [Advanced Undergraduate Seminars](https://biology.mit.edu/undergraduate/current-students/subject-offerings/advanced-undergraduate-seminars/) offered by the Biology Department at MIT. These seminars are tailored for students with an interest in using primary research literature to discuss and learn about current biological research in a highly interactive setting. Many instructors of the Advanced Undergraduate Seminars are postdoctoral scientists with a strong interest in teaching.\n",
+                "full_description": null,
+                "last_modified": "2024-02-07T21:33:38Z",
+                "published": true,
+                "languages": null,
+                "url": "https://ocw.mit.edu/courses/7-343-microbial-megaproducers-discovery-biosynthesis-engineering-and-applications-of-natural-products-fall-2020",
+                "slug": "courses/7-343-microbial-megaproducers-discovery-biosynthesis-engineering-and-applications-of-natural-products-fall-2020",
+                "availability": "Current",
+                "semester": "Fall",
+                "year": 2020,
+                "start_date": null,
+                "end_date": null,
+                "enrollment_start": null,
+                "enrollment_end": null,
+                "prices": null,
+                "checksum": null
+            }
+        ],
+        "image": {
+            "id": 2785,
+            "url": "https://ocw.mit.edu/courses/7-343-microbial-megaproducers-discovery-biosynthesis-engineering-and-applications-of-natural-products-fall-2020/520abf31ec7fb3ce3d29e7960207d7a4_7-343f20.jpg",
+            "description": "A pie chart showing the classes of terpenes and their applications.",
+            "alt": "A pie chart showing six different groups of terpene compounds, their chemical structures, their different uses, and the plants from which they are derived."
+        },
+        "learning_path_parents": [],
+        "user_list_parents": [],
+        "resource_type": "course",
+        "course": {
+            "course_numbers": [
+                {
+                    "value": "7.343",
+                    "department": {
+                        "department_id": "7",
+                        "name": "Biology"
+                    },
+                    "listing_type": "primary"
+                }
+            ]
+        },
+        "readable_id": "7.343+fall_2020",
+        "title": "Microbial Megaproducers: Discovery, Biosynthesis, Engineering and Applications of Natural Products",
+        "description": "The natural world is a mega-factory of small molecules, peptides, fatty acids, phospholipids, and a host of other compounds, known as natural products (NPs). Immensely diverse in structure and function, NPs have strongly influenced how we treat infectious disease, cancer, pain, and a host of other conditions. Roughly half of the drugs that have been approved in the past 30 years are NPs, derivatives of NPs or NP-inspired. In this discussion-based course, we will delve into research on discovering NPs from producing organisms, investigating the biochemistry of NP production, and using synthetic biology to create NP derivatives—all with a particular emphasis on how genomic data guides and informs all these studies.\n\nThis course is one of many [Advanced Undergraduate Seminars](https://biology.mit.edu/undergraduate/current-students/subject-offerings/advanced-undergraduate-seminars/) offered by the Biology Department at MIT. These seminars are tailored for students with an interest in using primary research literature to discuss and learn about current biological research in a highly interactive setting. Many instructors of the Advanced Undergraduate Seminars are postdoctoral scientists with a strong interest in teaching.\n",
+        "full_description": null,
+        "last_modified": "2024-02-07T21:33:38Z",
+        "published": true,
+        "languages": null,
+        "url": "https://ocw.mit.edu/courses/7-343-microbial-megaproducers-discovery-biosynthesis-engineering-and-applications-of-natural-products-fall-2020",
+        "professional": false
+    },
+    {
+        "id": 4805,
+        "topics": [
             {
                 "id": 40,
                 "name": "Literature"
+            },
+            {
+                "id": 38,
+                "name": "Humanities"
             },
             {
                 "id": 108,
@@ -835,182 +885,50 @@
             {
                 "department_id": "21L",
                 "name": "Literature"
+            },
+            {
+                "department_id": "WGS",
+                "name": "Women's and Gender Studies"
+            },
+            {
+                "department_id": "CMS-W",
+                "name": "Comparative Media Studies/Writing"
             }
         ],
         "certification": false,
         "prices": [],
         "runs": [
             {
-                "id": 4216,
+                "id": 3445,
                 "instructors": [
                     {
-                        "id": 874,
-                        "first_name": "Mary",
-                        "last_name": "Fuller",
-                        "full_name": "Prof. Mary Fuller"
+                        "id": 2032,
+                        "first_name": "John",
+                        "last_name": "Picker",
+                        "full_name": "Prof. John Picker"
                     }
                 ],
                 "image": {
-                    "id": 4267,
-                    "url": "https://ocw.mit.edu/courses/21l-705-major-authors-john-milton-spring-2008/6125061eb05ba1a70007241d51419477_21l-705s08.JPG",
-                    "description": "Michael casts out all of the fallen angels,\" an illustration of Milton's Paradise Lost by Gustav Dor?, 1866.  (Image courtesy of Wikimedia Commons.)",
-                    "alt": "Angels fall from bright clouds into shadow."
+                    "id": 3503,
+                    "url": "https://ocw.mit.edu/courses/21l-430-popular-culture-and-narrative-literature-comics-and-culture-fall-2010/773953de80625bd2b2839bd1f54b211a_21l-430f10.jpg",
+                    "description": "Grid-paper notebook (reinforced with thin cardstock) with comic strip on the cover. (Photo courtesy of delgrosso on Flickr.)",
+                    "alt": "Photo of a grid-paper notebook with comic strip on the cover. The notebook is reinforced with thin cardstock."
                 },
-                "run_id": "104789cf3f3926a1e6d8791c658ebef2",
-                "title": "Major Authors: John Milton",
-                "description": "In 1667, John Milton published what he intended both as the crowning achievement of a poetic career and a justification of God's ways to man: an epic poem which retold and reimagined the Biblical story of creation, temptation, and original sin. Even in a hostile political climate, _Paradise Lost_ was almost immediately recognized as a classic, and one fate of a classic is to be rewritten, both by admirers and by antagonists. In this seminar, we will read _Paradise Lost_ alongside works of 20th century fantasy and science fiction which rethink both Milton's text and its source.\n\nStudents should come to the seminar having read _Paradise Lost_ straight through at least once; this can be accomplished by taking the IAP subject, _Reading_ _Paradise Lost_ (21L.995), or independently. Twentieth century authors will include C. S. Lewis (_Perelandra_, _The Lion, the Witch and the Wardrobe_) and Philip Pullman (_His Dark Materials_), as well as assorted criticism. Each week, one class meeting will focus on Milton, and the other on one of the modern novels.\n",
-                "full_description": null,
-                "last_modified": "2024-01-30T18:40:30Z",
-                "published": true,
-                "languages": null,
-                "url": "https://ocw.mit.edu/courses/21l-705-major-authors-john-milton-spring-2008",
                 "level": [
-                    "Undergraduate"
-                ],
-                "slug": "courses/21l-705-major-authors-john-milton-spring-2008",
-                "availability": "Current",
-                "semester": "Spring",
-                "year": 2008,
-                "start_date": null,
-                "end_date": null,
-                "enrollment_start": null,
-                "enrollment_end": null,
-                "prices": null,
-                "checksum": null
-            }
-        ],
-        "image": {
-            "id": 4267,
-            "url": "https://ocw.mit.edu/courses/21l-705-major-authors-john-milton-spring-2008/6125061eb05ba1a70007241d51419477_21l-705s08.JPG",
-            "description": "Michael casts out all of the fallen angels,\" an illustration of Milton's Paradise Lost by Gustav Dor?, 1866.  (Image courtesy of Wikimedia Commons.)",
-            "alt": "Angels fall from bright clouds into shadow."
-        },
-        "learning_path_parents": [],
-        "user_list_parents": [],
-        "resource_type": "course",
-        "course": {
-            "course_numbers": [
-                {
-                    "value": "21L.705",
-                    "department": {
-                        "department_id": "21L",
-                        "name": "Literature"
-                    },
-                    "listing_type": "primary"
-                }
-            ]
-        },
-        "readable_id": "21L.705+spring_2008",
-        "title": "Major Authors: John Milton",
-        "description": "In 1667, John Milton published what he intended both as the crowning achievement of a poetic career and a justification of God's ways to man: an epic poem which retold and reimagined the Biblical story of creation, temptation, and original sin. Even in a hostile political climate, _Paradise Lost_ was almost immediately recognized as a classic, and one fate of a classic is to be rewritten, both by admirers and by antagonists. In this seminar, we will read _Paradise Lost_ alongside works of 20th century fantasy and science fiction which rethink both Milton's text and its source.\n\nStudents should come to the seminar having read _Paradise Lost_ straight through at least once; this can be accomplished by taking the IAP subject, _Reading_ _Paradise Lost_ (21L.995), or independently. Twentieth century authors will include C. S. Lewis (_Perelandra_, _The Lion, the Witch and the Wardrobe_) and Philip Pullman (_His Dark Materials_), as well as assorted criticism. Each week, one class meeting will focus on Milton, and the other on one of the modern novels.\n",
-        "full_description": null,
-        "last_modified": "2024-01-30T18:40:30Z",
-        "published": true,
-        "languages": null,
-        "url": "https://ocw.mit.edu/courses/21l-705-major-authors-john-milton-spring-2008",
-        "professional": false
-    },
-    {
-        "id": 4505,
-        "topics": [
-            {
-                "id": 32,
-                "name": "Engineering"
-            },
-            {
-                "id": 5,
-                "name": "Computer Science"
-            },
-            {
-                "id": 7,
-                "name": "Business"
-            },
-            {
-                "id": 148,
-                "name": "Algorithms and Data Structures"
-            },
-            {
-                "id": 22,
-                "name": "Information Technology"
-            },
-            {
-                "id": 184,
-                "name": "Software Design and Engineering"
-            },
-            {
-                "id": 185,
-                "name": "Data Mining"
-            }
-        ],
-        "offered_by": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "platform": {
-            "code": "ocw",
-            "name": "OCW"
-        },
-        "course_feature": [
-            "Lecture Notes",
-            "Exams with Solutions",
-            "Programming Assignments"
-        ],
-        "departments": [
-            {
-                "department_id": "6",
-                "name": "Electrical Engineering and Computer Science"
-            }
-        ],
-        "certification": false,
-        "prices": [],
-        "runs": [
-            {
-                "id": 3145,
-                "instructors": [
                     {
-                        "id": 1818,
-                        "first_name": "Carlo",
-                        "last_name": "Curino",
-                        "full_name": "Dr. Carlo Curino"
-                    },
-                    {
-                        "id": 1815,
-                        "first_name": "Samuel",
-                        "last_name": "Madden",
-                        "full_name": "Prof. Samuel Madden"
-                    },
-                    {
-                        "id": 1816,
-                        "first_name": "Robert",
-                        "last_name": "Morris",
-                        "full_name": "Prof. Robert Morris"
-                    },
-                    {
-                        "id": 1817,
-                        "first_name": "Michael",
-                        "last_name": "Stonebraker",
-                        "full_name": "Prof. Michael Stonebraker"
+                        "code": "undergraduate",
+                        "name": "Undergraduate"
                     }
                 ],
-                "image": {
-                    "id": 3205,
-                    "url": "https://ocw.mit.edu/courses/6-830-database-systems-fall-2010/f6a4a8580e9f629729e14e358a682bf4_6-830f10.jpg",
-                    "description": "Persons receiving food stamps in the U.S., 1960-2000. Shaded areas are periods of recession as defined by the National Bureau of Economic Research. (Image courtesy of the U.S. Department of Health and Human Services.) ",
-                    "alt": "Diagram of database architecture."
-                },
-                "run_id": "31ef61c657dd5493e29573050ee23a19",
-                "title": "Database Systems",
-                "description": "This course relies on primary readings from the database community to introduce graduate students to the foundations of database systems, focusing on basics such as the relational algebra and data model, schema normalization, query optimization, and transactions. It is designed for students who have taken [6.033](/courses/6-033-computer-system-engineering-spring-2018/) (or equivalent); no prior database experience is assumed, though students who have taken an undergraduate course in databases are encouraged to attend.",
+                "run_id": "a672ca756e5f4d5bb54f30c39c1a3c04",
+                "title": "Popular Culture and Narrative: Literature, Comics, and Culture",
+                "description": "In this course, we will investigate popular culture and narrative by focusing on the relationship between literary texts and comics. Several questions shape the syllabus and provide a framework for approaching the course materials: How do familiar aspects of comics trace their origins to literary texts and broader cultural concerns? How have classic comics gone on to influence literary fiction? In what ways do contemporary graphic narratives bring a new kind of seriousness of purpose to comics, blurring what's left of the boundaries between the highbrow and the lowbrow? Readings and materials for the course range from the nineteenth century to the present, and include novels, short stories, essays, older and newer comics, and some older and newer films. Expectations include diligent reading, active participation, occasional discussion leading, and two papers.\n",
                 "full_description": null,
-                "last_modified": "2024-01-30T17:57:28Z",
+                "last_modified": "2024-02-07T22:02:52Z",
                 "published": true,
                 "languages": null,
-                "url": "https://ocw.mit.edu/courses/6-830-database-systems-fall-2010",
-                "level": [
-                    "Graduate",
-                    "Undergraduate"
-                ],
-                "slug": "courses/6-830-database-systems-fall-2010",
+                "url": "https://ocw.mit.edu/courses/21l-430-popular-culture-and-narrative-literature-comics-and-culture-fall-2010",
+                "slug": "courses/21l-430-popular-culture-and-narrative-literature-comics-and-culture-fall-2010",
                 "availability": "Current",
                 "semester": "Fall",
                 "year": 2010,
@@ -1023,10 +941,10 @@
             }
         ],
         "image": {
-            "id": 3205,
-            "url": "https://ocw.mit.edu/courses/6-830-database-systems-fall-2010/f6a4a8580e9f629729e14e358a682bf4_6-830f10.jpg",
-            "description": "Persons receiving food stamps in the U.S., 1960-2000. Shaded areas are periods of recession as defined by the National Bureau of Economic Research. (Image courtesy of the U.S. Department of Health and Human Services.) ",
-            "alt": "Diagram of database architecture."
+            "id": 3503,
+            "url": "https://ocw.mit.edu/courses/21l-430-popular-culture-and-narrative-literature-comics-and-culture-fall-2010/773953de80625bd2b2839bd1f54b211a_21l-430f10.jpg",
+            "description": "Grid-paper notebook (reinforced with thin cardstock) with comic strip on the cover. (Photo courtesy of delgrosso on Flickr.)",
+            "alt": "Photo of a grid-paper notebook with comic strip on the cover. The notebook is reinforced with thin cardstock."
         },
         "learning_path_parents": [],
         "user_list_parents": [],
@@ -1034,43 +952,60 @@
         "course": {
             "course_numbers": [
                 {
-                    "value": "6.830",
+                    "value": "21L.430",
                     "department": {
-                        "department_id": "6",
-                        "name": "Electrical Engineering and Computer Science"
+                        "department_id": "21L",
+                        "name": "Literature"
                     },
                     "listing_type": "primary"
                 },
                 {
-                    "value": "6.814",
+                    "value": "WGS.492",
                     "department": {
-                        "department_id": "6",
-                        "name": "Electrical Engineering and Computer Science"
+                        "department_id": "WGS",
+                        "name": "Women's and Gender Studies"
                     },
+                    "listing_type": "cross-listed"
+                },
+                {
+                    "value": "CMS.920",
+                    "department": null,
                     "listing_type": "cross-listed"
                 }
             ]
         },
-        "readable_id": "6.830+fall_2010",
-        "title": "Database Systems",
-        "description": "This course relies on primary readings from the database community to introduce graduate students to the foundations of database systems, focusing on basics such as the relational algebra and data model, schema normalization, query optimization, and transactions. It is designed for students who have taken [6.033](/courses/6-033-computer-system-engineering-spring-2018/) (or equivalent); no prior database experience is assumed, though students who have taken an undergraduate course in databases are encouraged to attend.",
+        "readable_id": "21L.430+fall_2010",
+        "title": "Popular Culture and Narrative: Literature, Comics, and Culture",
+        "description": "In this course, we will investigate popular culture and narrative by focusing on the relationship between literary texts and comics. Several questions shape the syllabus and provide a framework for approaching the course materials: How do familiar aspects of comics trace their origins to literary texts and broader cultural concerns? How have classic comics gone on to influence literary fiction? In what ways do contemporary graphic narratives bring a new kind of seriousness of purpose to comics, blurring what's left of the boundaries between the highbrow and the lowbrow? Readings and materials for the course range from the nineteenth century to the present, and include novels, short stories, essays, older and newer comics, and some older and newer films. Expectations include diligent reading, active participation, occasional discussion leading, and two papers.\n",
         "full_description": null,
-        "last_modified": "2024-01-30T17:57:28Z",
+        "last_modified": "2024-02-07T22:02:52Z",
         "published": true,
         "languages": null,
-        "url": "https://ocw.mit.edu/courses/6-830-database-systems-fall-2010",
+        "url": "https://ocw.mit.edu/courses/21l-430-popular-culture-and-narrative-literature-comics-and-culture-fall-2010",
         "professional": false
     },
     {
-        "id": 3903,
+        "id": 3894,
         "topics": [
             {
-                "id": 216,
-                "name": "Curriculum and Teaching"
+                "id": 263,
+                "name": "Music History"
             },
             {
-                "id": 3,
-                "name": "Teaching and Education"
+                "id": 46,
+                "name": "Music"
+            },
+            {
+                "id": 239,
+                "name": "Music Theory"
+            },
+            {
+                "id": 240,
+                "name": "Music Performance"
+            },
+            {
+                "id": 90,
+                "name": "Fine Arts"
             }
         ],
         "offered_by": {
@@ -1082,51 +1017,53 @@
             "name": "OCW"
         },
         "course_feature": [
-            "Activity Assignments with Examples",
-            "Lecture Notes"
+            "Problem Sets",
+            "Exams with Solutions",
+            "Projects with Examples"
         ],
         "departments": [
             {
-                "department_id": "7",
-                "name": "Biology"
+                "department_id": "21M",
+                "name": "Music and Theater Arts"
             }
         ],
         "certification": false,
         "prices": [],
         "runs": [
             {
-                "id": 2543,
+                "id": 2534,
                 "instructors": [
                     {
-                        "id": 1273,
-                        "first_name": "Summer",
-                        "last_name": "Morrill",
-                        "full_name": "Dr. Summer Morrill"
+                        "id": 1055,
+                        "first_name": "Brian",
+                        "last_name": "Robison",
+                        "full_name": "Prof. Brian Robison"
                     }
                 ],
                 "image": {
-                    "id": 2607,
-                    "url": "https://ocw.mit.edu/courses/res-7-005-biology-teaching-assistant-ta-training-fall-2021/res7-005-s20.jpg",
-                    "description": null,
-                    "alt": "Four quadrants with illustrations and text describing core areas of pedagogy: an arrow and target for \"Learning Goals,\" two people icons in conversation for \"Feedback,\" hands holding puzzle pieces for \"Teamwork,\" and stylized people icons inter-connected by lines for \"Training and Support.\" "
+                    "id": 2598,
+                    "url": "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/b98cc3acc6f587077d153966785e29e7_21m-301s05.jpg",
+                    "description": "Image of Ludwig van Beethoven.(Image courtesy of Library of Congress, Prints and Photographs Division [reproduction number, LC-USZ62-13745 (b&w film copy neg.)].)",
+                    "alt": "A black and white painting of Ludwig van Beethoven."
                 },
-                "run_id": "593313c93aed45d9842cb0a39d0b674b",
-                "title": "Biology Teaching Assistant (TA) Training",
-                "description": "The MIT Biology Department supports TAs' teaching by providing a specialized Teaching Assistant (TA) training program in Biology Pedagogy, for which TAs can earn a training certificate. This program has been developed in response to the feedback of previous TAs, and is designed to actively meet each TA's needs as they are teaching. It provides practical knowledge that directly relates to their teaching responsibilities each week, and provides them with the opportunity to practice different skills and techniques in a supportive environment.",
+                "level": [
+                    {
+                        "code": "undergraduate",
+                        "name": "Undergraduate"
+                    }
+                ],
+                "run_id": "4a16a746d8d94c67b1cd15a83a556ab8",
+                "title": "Harmony and Counterpoint I",
+                "description": "In this subject we will study the basic harmonic, melodic, and formal practices of western music, principally the classical music of central Europe during the eighteenth century. Topics will include diatonic harmony, simple counterpoint in two parts, and tones of figuration. The coursework will combine composition, listening, analysis, and work in sight-singing and keyboard musicianship.\n",
                 "full_description": null,
-                "last_modified": "2024-01-30T18:26:43Z",
+                "last_modified": "2024-02-12T19:34:24Z",
                 "published": true,
                 "languages": null,
-                "url": "https://ocw.mit.edu/courses/res-7-005-biology-teaching-assistant-ta-training-fall-2021",
-                "level": [
-                    "Undergraduate",
-                    "Graduate",
-                    "Non-Credit"
-                ],
-                "slug": "courses/res-7-005-biology-teaching-assistant-ta-training-fall-2021",
+                "url": "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005",
+                "slug": "courses/21m-301-harmony-and-counterpoint-i-spring-2005",
                 "availability": "Current",
-                "semester": "Fall",
-                "year": 2021,
+                "semester": "Spring",
+                "year": 2005,
                 "start_date": null,
                 "end_date": null,
                 "enrollment_start": null,
@@ -1136,10 +1073,10 @@
             }
         ],
         "image": {
-            "id": 2607,
-            "url": "https://ocw.mit.edu/courses/res-7-005-biology-teaching-assistant-ta-training-fall-2021/res7-005-s20.jpg",
-            "description": null,
-            "alt": "Four quadrants with illustrations and text describing core areas of pedagogy: an arrow and target for \"Learning Goals,\" two people icons in conversation for \"Feedback,\" hands holding puzzle pieces for \"Teamwork,\" and stylized people icons inter-connected by lines for \"Training and Support.\" "
+            "id": 2598,
+            "url": "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/b98cc3acc6f587077d153966785e29e7_21m-301s05.jpg",
+            "description": "Image of Ludwig van Beethoven.(Image courtesy of Library of Congress, Prints and Photographs Division [reproduction number, LC-USZ62-13745 (b&w film copy neg.)].)",
+            "alt": "A black and white painting of Ludwig van Beethoven."
         },
         "learning_path_parents": [],
         "user_list_parents": [],
@@ -1147,43 +1084,47 @@
         "course": {
             "course_numbers": [
                 {
-                    "value": "RES.7-005",
+                    "value": "21M.301",
                     "department": {
-                        "department_id": "RES",
-                        "name": "Supplemental Resources"
+                        "department_id": "21M",
+                        "name": "Music and Theater Arts"
                     },
                     "listing_type": "primary"
                 }
             ]
         },
-        "readable_id": "RES.7-005+fall_2021",
-        "title": "Biology Teaching Assistant (TA) Training",
-        "description": "The MIT Biology Department supports TAs' teaching by providing a specialized Teaching Assistant (TA) training program in Biology Pedagogy, for which TAs can earn a training certificate. This program has been developed in response to the feedback of previous TAs, and is designed to actively meet each TA's needs as they are teaching. It provides practical knowledge that directly relates to their teaching responsibilities each week, and provides them with the opportunity to practice different skills and techniques in a supportive environment.",
+        "readable_id": "21M.301+spring_2005",
+        "title": "Harmony and Counterpoint I",
+        "description": "In this subject we will study the basic harmonic, melodic, and formal practices of western music, principally the classical music of central Europe during the eighteenth century. Topics will include diatonic harmony, simple counterpoint in two parts, and tones of figuration. The coursework will combine composition, listening, analysis, and work in sight-singing and keyboard musicianship.\n",
         "full_description": null,
-        "last_modified": "2024-01-30T18:26:43Z",
+        "last_modified": "2024-02-12T19:34:24Z",
         "published": true,
         "languages": null,
-        "url": "https://ocw.mit.edu/courses/res-7-005-biology-teaching-assistant-ta-training-fall-2021",
+        "url": "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005",
         "professional": false
     },
     {
-        "id": 5813,
+        "id": 4807,
         "topics": [
             {
                 "id": 32,
                 "name": "Engineering"
             },
             {
-                "id": 162,
-                "name": "Hydrology and Water Resource Systems"
+                "id": 5,
+                "name": "Computer Science"
             },
             {
-                "id": 26,
-                "name": "Environmental Engineering"
+                "id": 144,
+                "name": "Programming Languages"
             },
             {
-                "id": 150,
-                "name": "Aquatic Sciences and Water Quality Control"
+                "id": 184,
+                "name": "Software Design and Engineering"
+            },
+            {
+                "id": 155,
+                "name": "Theory of Computation"
             }
         ],
         "offered_by": {
@@ -1196,50 +1137,60 @@
         },
         "course_feature": [
             "Lecture Notes",
-            "Problem Sets with Solutions",
-            "Exams with Solutions",
-            "Projects with Examples"
+            "Projects",
+            "Competition Videos",
+            "Lecture Videos",
+            "Other Video"
         ],
         "departments": [
             {
-                "department_id": "1",
-                "name": "Civil and Environmental Engineering"
+                "department_id": "6",
+                "name": "Electrical Engineering and Computer Science"
             }
         ],
         "certification": false,
         "prices": [],
         "runs": [
             {
-                "id": 4453,
+                "id": 3447,
                 "instructors": [
                     {
-                        "id": 1334,
-                        "first_name": "Peter",
-                        "last_name": "Shanahan",
-                        "full_name": "Dr. Peter Shanahan"
+                        "id": 1805,
+                        "first_name": "Saman",
+                        "last_name": "Amarasinghe",
+                        "full_name": "Prof. Saman Amarasinghe"
+                    },
+                    {
+                        "id": 2033,
+                        "first_name": "Rodric",
+                        "last_name": "Rabbah",
+                        "full_name": "Dr. Rodric Rabbah"
                     }
                 ],
                 "image": {
-                    "id": 4504,
-                    "url": "https://ocw.mit.edu/courses/1-85-water-and-wastewater-treatment-engineering-spring-2006/5e23ac55e86cbd568daa8dd8b2662b59_1-85s06.jpg",
-                    "description": "This class deals with methods of purifying water. (Photo courtesy of Editor B.)",
-                    "alt": "Water beading on a waxed surface."
+                    "id": 3505,
+                    "url": "https://ocw.mit.edu/courses/6-189-multicore-programming-primer-january-iap-2007/29adf97891c3856cb3652b9848e93c55_6-189iap07.jpg",
+                    "description": "The PLAYSTATION®3 platform was used to teach students about parallel programming and multicore architectures. (Image courtesy of Sony Computer Entertainment, Inc. Used with permission.)",
+                    "alt": "The Playstation 3."
                 },
-                "run_id": "a4665277ca42169b77c131363d82da71",
-                "title": "Water and Wastewater Treatment Engineering",
-                "description": "This course is an overview of engineering approaches to protecting water quality with an emphasis on fundamental principals. Theory and conceptual design of systems for treating municipal wastewater and drinking water are discussed, as well as reactor theory, process kinetics, and models. Physical, chemical, and biological processes are presented, including sedimentation, filtration, biological treatment, disinfection, and sludge processing. Finally, there is discussion of engineered and natural processes for wastewater treatment.\n",
+                "level": [
+                    {
+                        "code": "undergraduate",
+                        "name": "Undergraduate"
+                    }
+                ],
+                "run_id": "9055002a47dc7c9622db460adcaacc3c",
+                "title": "Multicore Programming Primer",
+                "description": "The course serves as an introductory course in parallel programming. It offers a series of lectures on parallel programming concepts as well as a group project providing hands-on experience with parallel programming. The students will have the unique opportunity to use the cutting-edge PLAYSTATION 3 development platform as they learn how to design and implement exciting applications for multicore architectures. At the end of the course, students will have an understanding of:\n\n*   Fundamental design philosophies that multicore architectures address.\n*   Parallel programming philosophies and emerging best practices.\n\nThis course is offered during the Independent Activities Period (IAP), which is a special 4-week term at MIT that runs from the first week of January until the end of the month. The course can be tailored to a normal semester time line.\n\nAcknowledgements\n----------------\n\nThe course instructors are extremely grateful to [Sony](http://www.sony.com/), [IBM](http://www.ibm.com/us/), and [Toshiba](http://www.toshiba.com/tai/) for their support.\n",
                 "full_description": null,
-                "last_modified": "2024-01-30T17:37:35Z",
+                "last_modified": "2024-02-07T21:52:28Z",
                 "published": true,
                 "languages": null,
-                "url": "https://ocw.mit.edu/courses/1-85-water-and-wastewater-treatment-engineering-spring-2006",
-                "level": [
-                    "Graduate"
-                ],
-                "slug": "courses/1-85-water-and-wastewater-treatment-engineering-spring-2006",
+                "url": "https://ocw.mit.edu/courses/6-189-multicore-programming-primer-january-iap-2007",
+                "slug": "courses/6-189-multicore-programming-primer-january-iap-2007",
                 "availability": "Current",
-                "semester": "Spring",
-                "year": 2006,
+                "semester": "January IAP",
+                "year": 2007,
                 "start_date": null,
                 "end_date": null,
                 "enrollment_start": null,
@@ -1249,10 +1200,10 @@
             }
         ],
         "image": {
-            "id": 4504,
-            "url": "https://ocw.mit.edu/courses/1-85-water-and-wastewater-treatment-engineering-spring-2006/5e23ac55e86cbd568daa8dd8b2662b59_1-85s06.jpg",
-            "description": "This class deals with methods of purifying water. (Photo courtesy of Editor B.)",
-            "alt": "Water beading on a waxed surface."
+            "id": 3505,
+            "url": "https://ocw.mit.edu/courses/6-189-multicore-programming-primer-january-iap-2007/29adf97891c3856cb3652b9848e93c55_6-189iap07.jpg",
+            "description": "The PLAYSTATION®3 platform was used to teach students about parallel programming and multicore architectures. (Image courtesy of Sony Computer Entertainment, Inc. Used with permission.)",
+            "alt": "The Playstation 3."
         },
         "learning_path_parents": [],
         "user_list_parents": [],
@@ -1260,23 +1211,130 @@
         "course": {
             "course_numbers": [
                 {
-                    "value": "1.85",
+                    "value": "6.189",
                     "department": {
-                        "department_id": "1",
-                        "name": "Civil and Environmental Engineering"
+                        "department_id": "6",
+                        "name": "Electrical Engineering and Computer Science"
                     },
                     "listing_type": "primary"
                 }
             ]
         },
-        "readable_id": "1.85+spring_2006",
-        "title": "Water and Wastewater Treatment Engineering",
-        "description": "This course is an overview of engineering approaches to protecting water quality with an emphasis on fundamental principals. Theory and conceptual design of systems for treating municipal wastewater and drinking water are discussed, as well as reactor theory, process kinetics, and models. Physical, chemical, and biological processes are presented, including sedimentation, filtration, biological treatment, disinfection, and sludge processing. Finally, there is discussion of engineered and natural processes for wastewater treatment.\n",
+        "readable_id": "6.189+january-iap_2007",
+        "title": "Multicore Programming Primer",
+        "description": "The course serves as an introductory course in parallel programming. It offers a series of lectures on parallel programming concepts as well as a group project providing hands-on experience with parallel programming. The students will have the unique opportunity to use the cutting-edge PLAYSTATION 3 development platform as they learn how to design and implement exciting applications for multicore architectures. At the end of the course, students will have an understanding of:\n\n*   Fundamental design philosophies that multicore architectures address.\n*   Parallel programming philosophies and emerging best practices.\n\nThis course is offered during the Independent Activities Period (IAP), which is a special 4-week term at MIT that runs from the first week of January until the end of the month. The course can be tailored to a normal semester time line.\n\nAcknowledgements\n----------------\n\nThe course instructors are extremely grateful to [Sony](http://www.sony.com/), [IBM](http://www.ibm.com/us/), and [Toshiba](http://www.toshiba.com/tai/) for their support.\n",
         "full_description": null,
-        "last_modified": "2024-01-30T17:37:35Z",
+        "last_modified": "2024-02-07T21:52:28Z",
         "published": true,
         "languages": null,
-        "url": "https://ocw.mit.edu/courses/1-85-water-and-wastewater-treatment-engineering-spring-2006",
+        "url": "https://ocw.mit.edu/courses/6-189-multicore-programming-primer-january-iap-2007",
+        "professional": false
+    },
+    {
+        "id": 4655,
+        "topics": [
+            {
+                "id": 164,
+                "name": "Topology and Geometry"
+            },
+            {
+                "id": 37,
+                "name": "Mathematics"
+            }
+        ],
+        "offered_by": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "platform": {
+            "code": "ocw",
+            "name": "OCW"
+        },
+        "course_feature": [
+            "Presentation Assignments",
+            "Written Assignments with Examples",
+            "Instructor Insights"
+        ],
+        "departments": [
+            {
+                "department_id": "18",
+                "name": "Mathematics"
+            }
+        ],
+        "certification": false,
+        "prices": [],
+        "runs": [
+            {
+                "id": 3295,
+                "instructors": [
+                    {
+                        "id": 914,
+                        "first_name": "Haynes",
+                        "last_name": "Miller",
+                        "full_name": "Prof. Haynes Miller"
+                    }
+                ],
+                "image": {
+                    "id": 3355,
+                    "url": "https://ocw.mit.edu/courses/18-915-graduate-topology-seminar-kan-seminar-fall-2014/470a8f4542a58b76a97f3cf6fc6c95d9_18-915f14.jpg",
+                    "description": "Graduate student, Lyubo Panchev, gives a lecture in the Fall 2014 Kan seminar. Photo courtesy of MIT OpenCourseWare.",
+                    "alt": "Male student in blue dress shirt in fron of black board and speaking to a small group of students."
+                },
+                "level": [
+                    {
+                        "code": "graduate",
+                        "name": "Graduate"
+                    }
+                ],
+                "run_id": "461dcffb030ff00240d0238375fce86f",
+                "title": "Graduate Topology Seminar: Kan Seminar",
+                "description": "This is a literature seminar with a focus on classic papers in Algebraic Topology. It is named after the late MIT professor [Daniel Kan](http://math.mit.edu/about/history/obituaries/kan.php). Each student gives one or two talks on each of three papers, chosen in consultation with the instructor, reads all the papers presented by other students, and writes reactions to the papers. This course is useful not only to students pursuing algebraic topology as a field of study, but also to those interested in symplectic geometry, representation theory, and combinatorics.\n",
+                "full_description": null,
+                "last_modified": "2024-02-12T19:49:59Z",
+                "published": true,
+                "languages": null,
+                "url": "https://ocw.mit.edu/courses/18-915-graduate-topology-seminar-kan-seminar-fall-2014",
+                "slug": "courses/18-915-graduate-topology-seminar-kan-seminar-fall-2014",
+                "availability": "Current",
+                "semester": "Fall",
+                "year": 2014,
+                "start_date": null,
+                "end_date": null,
+                "enrollment_start": null,
+                "enrollment_end": null,
+                "prices": null,
+                "checksum": null
+            }
+        ],
+        "image": {
+            "id": 3355,
+            "url": "https://ocw.mit.edu/courses/18-915-graduate-topology-seminar-kan-seminar-fall-2014/470a8f4542a58b76a97f3cf6fc6c95d9_18-915f14.jpg",
+            "description": "Graduate student, Lyubo Panchev, gives a lecture in the Fall 2014 Kan seminar. Photo courtesy of MIT OpenCourseWare.",
+            "alt": "Male student in blue dress shirt in fron of black board and speaking to a small group of students."
+        },
+        "learning_path_parents": [],
+        "user_list_parents": [],
+        "resource_type": "course",
+        "course": {
+            "course_numbers": [
+                {
+                    "value": "18.915",
+                    "department": {
+                        "department_id": "18",
+                        "name": "Mathematics"
+                    },
+                    "listing_type": "primary"
+                }
+            ]
+        },
+        "readable_id": "18.915+fall_2014",
+        "title": "Graduate Topology Seminar: Kan Seminar",
+        "description": "This is a literature seminar with a focus on classic papers in Algebraic Topology. It is named after the late MIT professor [Daniel Kan](http://math.mit.edu/about/history/obituaries/kan.php). Each student gives one or two talks on each of three papers, chosen in consultation with the instructor, reads all the papers presented by other students, and writes reactions to the papers. This course is useful not only to students pursuing algebraic topology as a field of study, but also to those interested in symplectic geometry, representation theory, and combinatorics.\n",
+        "full_description": null,
+        "last_modified": "2024-02-12T19:49:59Z",
+        "published": true,
+        "languages": null,
+        "url": "https://ocw.mit.edu/courses/18-915-graduate-topology-seminar-kan-seminar-fall-2014",
         "professional": false
     }
 ]
