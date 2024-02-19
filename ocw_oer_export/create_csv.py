@@ -8,7 +8,7 @@ import logging
 
 from .client import extract_data_from_api
 from .data_handler import extract_data_from_json
-from .constants import API_URL
+from .config import API_URL
 from .utilities import normalize_course_url, normalize_keywords, text_cleanup
 
 
@@ -64,7 +64,9 @@ def get_cr_sublevel(levels):
         "High School": ["High School", "Community College/Lower Division"],
         "Non-Credit": ["Career/Technical Education"],
     }
-    sublevels = [sublevel for level in levels for sublevel in level_mappings.get(level)]
+    sublevels = [
+        sublevel for level in levels for sublevel in level_mappings.get(level["name"])
+    ]
     return "|".join(sorted(set(sublevels)))
 
 
@@ -110,15 +112,17 @@ def get_cr_keywords(fm_ocw_keywords_mapping, list_of_topics_objs, course_url):
 def get_cr_create_date(semester, year):
     """Convert a semester and year into a ballpark start date."""
     semester_start_dates = {
-        "Fall": "08-01",
+        "Fall": "09-01",
         "Spring": "02-01",
         "Summer": "06-01",
         "January IAP": "01-01",
     }
     start_date = semester_start_dates.get(semester)
-    if start_date:
+    if start_date and year:
         return f"{year}-{start_date}"
-    return f"{year}-01-01"
+    if year:
+        return f"{year}-01-01"
+    return ""
 
 
 def get_cr_authors(list_of_authors_objs):
