@@ -196,7 +196,7 @@ def transform_single_course(course, ocw_topics_mapping, fm_ocw_keywords_mapping)
         "CR_PROVIDER": "MIT",
         "CR_PROVIDER_SET": "MIT OpenCourseWare",
         "CR_COU_URL": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-        "CR_COU_COPYRIGHT_HOLDER": "MIT",
+        "CR_COU_COPYRIGHT_HOLDER": get_cr_authors(course_runs["instructors"]),
         "CR_EDUCATIONAL_USE": get_cr_educational_use(course["course_feature"]),
         "CR_ACCESSIBILITY": get_cr_accessibility(course["course_feature"]),
     }
