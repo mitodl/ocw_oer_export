@@ -3,9 +3,8 @@ Module for loading environment settings and setting API base URL based on the cu
 """
 import os
 from dotenv import load_dotenv
-from .constants import API_BASE_URLS
 
 load_dotenv()
 
-environment_key = os.getenv("ENVIRONMENT", "PRODUCTION").upper()
-API_URL = API_BASE_URLS.get(environment_key)
+API_BASE_URL = os.getenv("API_BASE_URL", "https://mitopen.odl.mit.edu")
+API_URL = f"{API_BASE_URL}/api/v1/courses/?platform=ocw"

@@ -46,9 +46,9 @@ If you want to change this, you will not only have to change the `output_path` i
 
 ## Environment Variables
 
-By default, this project uses MIT Open's Production API, as given in `ocw_oer_export/constants.py`.
-To use the RC API, create an environment file, `.env` in the project's root directory and add:
-`ENVIRONMENT=rc`
+By default, this project uses MIT Open's Production API, as given in `ocw_oer_export/config.py`.
+To use the RC API or local, create an environment file, `.env` in the project's root directory and add the relevant base URL:
+Eg. `API_BASE_URL=https://mitopen-rc.odl.mit.edu` or `API_BASE_URL=http://localhost:8063`
 
 ## Requirements
 
