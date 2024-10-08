@@ -3,9 +3,8 @@ on:
   push:
       branches:
       - main
-  pull_request:
-  # schedule:
-  #     - cron: '0 10 * * 1' # Every Monday at 10AM
+  schedule:
+      - cron: '0 10 * * 1' # Every Monday at 10AM
 
 jobs:
   generate_and_release_csv:
