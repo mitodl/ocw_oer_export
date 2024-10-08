@@ -95,4 +95,4 @@ jobs:
             fi
             gh release create $LATEST_RELEASE_NAME ./private/output/ocw_oer_export.csv -t "Latest Release" -n "This release was created for CSV weekly output. This release contains the most recent CSV. Please get the CSV file from the Assets listed below." --latest --target $GITHUB_SHA
           env:
-            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
