@@ -78,7 +78,7 @@ jobs:
           run:
             |
             echo "Creating release: $TAG_NAME"
-            gh release create "${{ env.TAG_NAME }}" ./private/output/ocw_oer_export.csv -p -t "${{ env.RELEASE_TITLE }}" -n "This release was created for CSV weekly output. Please get the CSV file from the Assets listed below."
+            gh release create "${{ env.TAG_NAME }}" ./private/output/ocw_oer_export.csv -p -t "${{ env.RELEASE_TITLE }}" -n "This release was created for CSV weekly output. Please get the CSV file from the Assets listed below." --target $GITHUB_SHA
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
