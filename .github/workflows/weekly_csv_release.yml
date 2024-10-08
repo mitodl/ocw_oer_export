@@ -88,6 +88,11 @@ jobs:
             if gh release view $LATEST_RELEASE_NAME
             then
                 gh release delete $LATEST_RELEASE_NAME
+                if git rev-parse $LATEST_RELEASE_NAME
+                then
+                  git tag -d $LATEST_RELEASE_NAME
+                  git push --delete origin $LATEST_RELEASE_NAME
+                fi
             fi
             gh release create $LATEST_RELEASE_NAME ./private/output/ocw_oer_export.csv -t "Latest Release" -n "This release was created for CSV weekly output. This release contains the most recent CSV. Please get the CSV file from the Assets listed below." --latest --target $GITHUB_SHA
           env:
