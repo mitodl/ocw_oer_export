@@ -63,7 +63,7 @@ def get_cr_sublevel(levels):
         "Undergraduate": ["Community College/Lower Division", "College/Upper Division"],
         "Graduate": ["Graduate/Professional"],
         "High School": ["High School", "Community College/Lower Division"],
-        "Non-Credit": ["Career/Technical Education"],
+        "Non-Credit": ["Career/Technical"],
     }
     sublevels = [
         sublevel for level in levels for sublevel in level_mappings.get(level["name"])
@@ -194,8 +194,7 @@ def transform_single_course(course, ocw_topics_mapping, fm_ocw_keywords_mapping)
             course_runs["semester"], course_runs["year"]
         ),
         "CR_AUTHOR_NAME": get_cr_authors(course_runs["instructors"]),
-        "CR_PROVIDER": "MIT",
-        "CR_PROVIDER_SET": "MIT OpenCourseWare",
+        "CR_PROVIDER_SET": "MIT:MIT OpenCourseWare",
         "CR_COU_URL": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
         "CR_COU_COPYRIGHT_HOLDER": get_cr_authors(course_runs["instructors"]),
         "CR_EDUCATIONAL_USE": get_cr_educational_use(course["course_feature"]),
@@ -253,7 +252,6 @@ def create_csv(
         "CR_KEYWORDS",
         "CR_CREATE_DATE",
         "CR_AUTHOR_NAME",
-        "CR_PROVIDER",
         "CR_PROVIDER_SET",
         "CR_COU_URL",
         "CR_COU_COPYRIGHT_HOLDER",
