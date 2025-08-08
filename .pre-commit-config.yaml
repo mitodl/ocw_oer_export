@@ -15,12 +15,12 @@ repos:
         args: ['--maxkb=5120'] # 5mb
       - id: debug-statements
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.37.0
+    rev: v1.37.1
     hooks:
       - id: yamllint
         args: [--format, parsable, -d, relaxed]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.11.6"
+    rev: "v0.12.7"
     hooks:
     - id: ruff
       args: [ --fix ]
