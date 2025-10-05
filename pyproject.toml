@@ -12,7 +12,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-certifi = "2025.8.3"
+certifi = "2025.10.5"
 cfgv = "3.4.0"
 charset-normalizer = "3.4.3"
 decorator = "5.2.1"
