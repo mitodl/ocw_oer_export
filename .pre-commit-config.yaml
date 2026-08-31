@@ -20,13 +20,13 @@ repos:
       - id: yamllint
         args: [--format, parsable, -d, relaxed]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.15.11"
+    rev: "v0.16.5"
     hooks:
     - id: ruff
       args: [ --fix ]
     - id: ruff-format
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: v1.29.0
+    rev: v1.30.0
     hooks:
       - id: zizmor
         args: [--no-progress, --min-severity=medium, --min-confidence=medium]
