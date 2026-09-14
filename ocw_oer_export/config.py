@@ -3,6 +3,7 @@ Module for loading environment settings and setting API base URL based on the cu
 """
 
 import os
+
 from dotenv import load_dotenv
 
 load_dotenv()
