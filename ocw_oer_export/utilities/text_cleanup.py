@@ -4,6 +4,7 @@ Module for cleaning up HTML and Markdown mixed text coming out of MIT's OCW Stud
 
 import re
 from io import StringIO
+
 from markdown import Markdown
 
 

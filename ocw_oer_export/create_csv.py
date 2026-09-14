@@ -3,13 +3,12 @@ Module for creating OER-template CSV file with data extracted from MIT OpenCours
 """
 
 import csv
-import os
 import logging
-
+import os
 
 from .client import extract_data_from_api
-from .data_handler import extract_data_from_json
 from .config import API_URL
+from .data_handler import extract_data_from_json
 from .utilities import normalize_course_url, normalize_keywords, text_cleanup
 
 
