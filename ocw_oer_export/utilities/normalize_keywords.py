@@ -3,6 +3,7 @@ Module for normalizing OCW FM export course keywords.
 """
 
 import re
+
 from titlecase import titlecase
 
 
