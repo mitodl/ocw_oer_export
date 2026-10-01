@@ -6,6 +6,7 @@ This demonstration project showcases how to utilize the MIT Learn API. It specif
 
 1. [Initial Setup & Usage](#initial-setup)
 1. [Requirements](#requirements)
+1. [Local Development](#local-development)
 1. [Tests](#tests)
 1. [Committing & Formatting](#committing-&-formatting)
 
@@ -57,6 +58,15 @@ For successful execution and correct output, ensure the [MIT Learn's API](https:
 `title`, `url`, `runs: level`, `description`, `topics`, `runs: instructors`, `runs: semester`, `runs: year`, `course_feature`
 Additionally, the `mapping_files` should be up-to-date. If new topics are added in OCW without corresponding mappings in `ocw_oer_export/mapping_files/ocw_topic_to_oer_subject.csv`, this will lead to `null` entries for those topics in the CSV (`CR_SUBJECT`). In addition to that, make sure `fm_keywords_exports.csv` is also present.
 
+## Local Development
+
+This project uses [uv](https://docs.astral.sh/uv/) to manage Python and its dependencies. To set up a local environment and run the CLI without Docker:
+
+```
+uv sync
+uv run python -m ocw_oer_export.cli --create_csv
+```
+
 ## Tests
 
 To run unit tests:
@@ -65,17 +75,22 @@ To run unit tests:
 docker run --rm ocw_oer_export python -m unittest discover -s tests
 ```
 
-## Committing & Formatting
-
-To ensure commits to GitHub are safe, first install [pre-commit](https://pre-commit.com/):
+Or, locally:
 
 ```
-pip install pre-commit
-pre-commit install
+uv run python -m unittest discover -s tests
+```
+
+## Committing & Formatting
+
+To ensure commits to GitHub are safe, install the [pre-commit](https://pre-commit.com/) hooks (pre-commit is included in the project dependencies):
+
+```
+uv run pre-commit install
 ```
 
 Running pre-commit can confirm your commit is safe to be pushed to GitHub and correctly formatted:
 
 ```
-pre-commit run --all-files
+uv run pre-commit run --all-files
 ```

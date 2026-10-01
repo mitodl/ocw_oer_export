@@ -1,37 +1,40 @@
-[tool.poetry]
+[project]
 name = "ocw_oer_export"
 description = "A project to export MIT OpenCourseWare (OCW) courses' metadata to CSV format, compatible with OER Commons import requirements."
-authors = ["MITODL"]
+authors = [{ name = "MITODL" }]
 license = "BSD-3-Clause"
 readme = "README.md"
 version = "0.0.0"
+requires-python = ">=3.14,<4.0"
+dependencies = [
+    "certifi==2025.11.12",
+    "cfgv==3.5.0",
+    "charset-normalizer==3.4.4",
+    "decorator==5.2.1",
+    "distlib==0.4.0",
+    "filelock==3.20.3",
+    "identify==2.6.19",
+    "idna==3.15",
+    "importlib-metadata==8.7.1",
+    "Markdown==3.10.3",
+    "nodeenv==1.10.0",
+    "platformdirs==4.4.0",
+    "pre-commit==4.6.2",
+    "py==1.11.0",
+    "python-dotenv>=1.0.1,<2.0.0",
+    "PyYAML==6.0.3",
+    "requests==2.33.0",
+    "retry==0.9.2",
+    "titlecase==2.4.1",
+    "tqdm==4.67.1",
+    "urllib3==2.7.0",
+    "virtualenv==20.36.1",
+    "zipp==3.23.0",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
 
-[tool.poetry.dependencies]
-python = "^3.9"
-certifi = "2025.11.12"
-cfgv = "3.5.0"
-charset-normalizer = "3.4.4"
-decorator = "5.2.1"
-distlib = "0.4.0"
-filelock = "3.20.3"
-identify = "2.6.19"
-idna = "3.15"
-importlib-metadata = "8.7.1"
-Markdown = "3.10.3"
-nodeenv = "1.10.0"
-platformdirs = "4.4.0"
-pre-commit = "4.6.2"
-py = "1.11.0"
-python-dotenv = "^1.0.1"
-PyYAML = "6.0.3"
-requests = "2.33.0"
-retry = "0.9.2"
-titlecase = "2.4.1"
-tqdm = "4.67.1"
-urllib3 = "2.7.0"
-virtualenv = "20.36.1"
-zipp = "3.23.0"
+[tool.uv.build-backend]
+module-root = ""
