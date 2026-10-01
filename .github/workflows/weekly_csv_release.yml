@@ -86,7 +86,8 @@ jobs:
                 gh release delete $LATEST_RELEASE_NAME --yes --cleanup-tag
             fi
             # Remove a tag left behind without its release, or the new release would reuse it.
-            if gh api "repos/${GITHUB_REPOSITORY}/git/refs/tags/${LATEST_RELEASE_NAME}" > /dev/null 2>&1
+            # git/ref/ matches exactly; git/refs/ would also match tags that merely start with the name.
+            if gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/${LATEST_RELEASE_NAME}" > /dev/null 2>&1
             then
                 gh api -X DELETE "repos/${GITHUB_REPOSITORY}/git/refs/tags/${LATEST_RELEASE_NAME}"
             fi
