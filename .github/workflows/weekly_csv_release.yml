@@ -56,15 +56,15 @@ jobs:
 
         - name: Format Release Date for Release Title
           run: |
+            export TZ="America/New_York"
             DaySuffix() {
-              case `date +%d` in
+              case `date +%-d` in
                 1|21|31) echo "st";;
                 2|22)    echo "nd";;
                 3|23)    echo "rd";;
                 *)       echo "th";;
               esac
             }
-            TZ="US/Eastern"
             TODAY=$(date +"%A, %B %-d"$(DaySuffix)", %Y")
             echo "RELEASE_TITLE=${TODAY}" >> $GITHUB_ENV
 
@@ -79,14 +79,16 @@ jobs:
         - name: Update 'Latest' Release
           run: |
             LATEST_RELEASE_NAME="latest"
-            if gh release view $LATEST_RELEASE_NAME
+            # Checkout doesn't persist credentials, so delete the release and its tag
+            # through the API rather than with git push.
+            if gh release view $LATEST_RELEASE_NAME > /dev/null 2>&1
             then
-                gh release delete $LATEST_RELEASE_NAME
-                if git rev-parse $LATEST_RELEASE_NAME
-                then
-                  git tag -d $LATEST_RELEASE_NAME
-                  git push --delete origin $LATEST_RELEASE_NAME
-                fi
+                gh release delete $LATEST_RELEASE_NAME --yes --cleanup-tag
+            fi
+            # Remove a tag left behind without its release, or the new release would reuse it.
+            if gh api "repos/${GITHUB_REPOSITORY}/git/refs/tags/${LATEST_RELEASE_NAME}" > /dev/null 2>&1
+            then
+                gh api -X DELETE "repos/${GITHUB_REPOSITORY}/git/refs/tags/${LATEST_RELEASE_NAME}"
             fi
             gh release create $LATEST_RELEASE_NAME ./private/output/ocw_oer_export.csv -t "Latest Release" -n "This release was created for CSV weekly output. This release contains the most recent CSV. Please get the CSV file from the Assets listed below." --latest --target $GITHUB_SHA
           env:
