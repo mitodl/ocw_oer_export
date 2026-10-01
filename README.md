@@ -67,15 +67,17 @@ docker run --rm ocw_oer_export python -m unittest discover -s tests
 
 ## Committing & Formatting
 
-To ensure commits to GitHub are safe, first install [pre-commit](https://pre-commit.com/):
+Code checks run with [prek](https://prek.j178.dev/), which reads `.pre-commit-config.yaml`. Install the version pinned in `.github/workflows/autofix.yml`:
 
-```
-pip install pre-commit
-pre-commit install
+```bash
+uv tool install prek==0.5.4
+prek install -f
 ```
 
-Running pre-commit can confirm your commit is safe to be pushed to GitHub and correctly formatted:
+`prek install -f` replaces an existing pre-commit git hook. To check all files before pushing:
 
+```bash
+prek run --all-files
 ```
-pre-commit run --all-files
-```
+
+The `prek` check runs these hooks on every pull request. When the hooks' own fixes make every hook pass, [autofix.ci](https://autofix.ci/) pushes them as one commit. It refuses fixes to files under `.github/`, so fix those locally.
