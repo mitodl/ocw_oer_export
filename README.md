@@ -83,14 +83,17 @@ uv run python -m unittest discover -s tests
 
 ## Committing & Formatting
 
-To ensure commits to GitHub are safe, install the [pre-commit](https://pre-commit.com/) hooks (pre-commit is included in the project dependencies):
+To ensure commits to GitHub are safe, install the git hook with [prek](https://prek.j178.dev/), which runs the hooks in `.pre-commit-config.yaml` (prek is pinned in the project's dependencies):
 
 ```
-uv run pre-commit install
+uv sync
+uv run prek install -f
 ```
 
-Running pre-commit can confirm your commit is safe to be pushed to GitHub and correctly formatted:
+`-f` replaces any git hook that pre-commit installed earlier.
+
+Running prek can confirm your commit is safe to be pushed to GitHub and correctly formatted:
 
 ```
-uv run pre-commit run --all-files
+uv run prek run --all-files
 ```
