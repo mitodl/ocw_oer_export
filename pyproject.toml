@@ -19,7 +19,6 @@ dependencies = [
     "Markdown==3.10.3",
     "nodeenv==1.10.0",
     "platformdirs==4.4.0",
-    "pre-commit==4.6.2",
     "py==1.11.0",
     "python-dotenv>=1.0.1,<2.0.0",
     "PyYAML==6.0.3",
@@ -31,6 +30,10 @@ dependencies = [
     "virtualenv==20.36.1",
     "zipp==3.23.0",
 ]
+
+[dependency-groups]
+prek = ["prek==0.5.3"]
+dev = [{ include-group = "prek" }]
 
 [build-system]
 requires = ["uv_build>=0.9.18,<0.10.0"]
