@@ -2,8 +2,9 @@
 Module for interacting with the MIT OpenCourseWare API.
 """
 
-import math
 import logging
+import math
+
 import requests
 from retry import retry
 from tqdm import tqdm

@@ -1,6 +1,7 @@
 import unittest
-from ocw_oer_export.config import API_URL
+
 from ocw_oer_export.client import make_request
+from ocw_oer_export.config import API_URL
 
 
 class APITestCase(unittest.TestCase):
