@@ -7,7 +7,7 @@ readme = "README.md"
 version = "0.0.0"
 requires-python = ">=3.14,<4.0"
 dependencies = [
-    "certifi==2025.11.12",
+    "certifi==2026.10.19",
     "cfgv==3.5.0",
     "charset-normalizer==3.4.4",
     "decorator==5.2.1",
@@ -41,3 +41,6 @@ build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-root = ""
+
+[tool.uv]
+constraint-dependencies = ["certifi>=2026.10.19"]  # eMudhra CA compromise: never resolve a certifi that trusts the compromised CAs
